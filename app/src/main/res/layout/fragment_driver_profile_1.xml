@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/selected_dot"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:id="@+id/createprofile"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/Backimg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/BackImage" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/lblDiscard1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Discard"
+                    android:theme="@style/textDiscard"
+                    android:gravity="right"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="6dp"
+                    android:layout_marginLeft="15dp"
+                    android:src="@drawable/progress_rectangle_selected"/>
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="6dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/progress_rectangle_default"/>
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="6dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/progress_rectangle_default"/>
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="6dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/progress_rectangle_default"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Create Your Profile"
+                    android:layout_marginLeft="15dp"
+                    android:theme="@style/HeadertTitleforRegistration"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="48dp"
+            android:layout_below="@id/createprofile"
+            android:background="@drawable/curve_box"
+            android:scrollbars="vertical">
+            <LinearLayout
+                android:id="@+id/layout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="DRIVER'S FIRST NAME *"
+                    style="@style/fildtitletext"/>
+
+                <EditText
+                    android:id="@+id/edtcust_Firstname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Driver's First Name"
+                    style="@style/EditTextForRectangleBox_215"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="DRIVER'S LAST NAME *"
+                    style="@style/fildtitletext"/>
+
+                <EditText
+                    android:id="@+id/edtcust_Lastname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Driver's Last Name"
+                    style="@style/EditTextForRectangleBox_215"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="STREET NO &amp; NAME *"
+                    style="@style/fildtitletext"/>
+
+                <EditText
+                    android:id="@+id/edt_CustStreet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Your Street No &amp; Name"
+                    style="@style/EditTextForRectangleBox_215"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="UNIT"
+                        style="@style/fildtitletext"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="17dp"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="PIN / ZIP CODE *"
+                        style="@style/fildtitletext"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <EditText
+                        android:id="@+id/edt_CustUnitNo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:hint="Enter Unit"
+                        style="@style/EditTextForRectangleBox_200"/>
+
+                    <EditText
+                        android:id="@+id/edt_CustZipCode"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:hint="Enter Code"
+                        android:maxLength="10"
+                        android:inputType="text"
+                        style="@style/EditTextForRectangleBox_200"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="COUNTRY *"
+                    style="@style/fildtitletext"/>
+
+                <Spinner
+                    android:id="@+id/sp_Countrylist"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/ic_spinner_bg"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="left"
+                    android:text="STATE / PROVINCE *"
+                    android:textAlignment="gravity"
+                    style="@style/fildtitletext" />
+
+                <Spinner
+                    android:id="@+id/Sp_Statelist"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/ic_spinner_bg"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="left"
+                    android:text="CITY *"
+                    style="@style/fildtitletext"/>
+
+                <EditText
+                    android:id="@+id/cust_cityName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:hint="Enter City Name"
+                    style="@style/EditTextForRectangleBox_215"/>
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+        <LinearLayout
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/footerButtonBC"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/lblNext1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="NEXT"
+                android:theme="@style/footertextview"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

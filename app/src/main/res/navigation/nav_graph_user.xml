@@ -1,0 +1,1154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_user_details"
+    app:startDestination="@id/User_Details">
+
+    <fragment
+        android:id="@+id/User_Details"
+        android:name="com.ochs.app.flexiicar_app.user.Fragment_Customer_Profile"
+        android:label="User_Details"
+        tools:layout="@layout/fragment_customer_profile">
+        <action
+            android:id="@+id/action_User_Details_to_Edit_Personal_info"
+            app:destination="@id/Edit_Personal_info" />
+        <action
+            android:id="@+id/action_User_Details_to_Reservation"
+            app:destination="@id/Reservation" />
+        <action
+            android:id="@+id/action_User_Details_to_User_timeline"
+            app:destination="@id/User_timeline" />
+        <action
+            android:id="@+id/action_User_Details_to_Agreements"
+            app:destination="@id/Agreements" />
+        <action
+            android:id="@+id/action_User_Details_to_Bills_and_Payment"
+            app:destination="@id/Bills_and_Payment" />
+        <action
+            android:id="@+id/action_User_Details_to_InsurancePolicyList"
+            app:destination="@id/InsurancePolicyList" />
+        <action
+            android:id="@+id/action_User_Details_to_CardsOnAccount"
+            app:destination="@id/CardsOnAccount" />
+        <action
+            android:id="@+id/action_User_Details_to_ChangePass"
+            app:destination="@id/ChangePass" />
+        <action
+            android:id="@+id/action_User_Details_to_CurrentVehicleOnRent"
+            app:destination="@id/CurrentVehicleOnRent" />
+
+        <action
+            android:id="@+id/action_User_Details_to_DrivingLicense_Details"
+            app:destination="@id/DrivingLicense_Details" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/CurrentVehicleOnRent"
+        android:name="com.ochs.app.flexiicar_app.user.Fragment_Current_VehicleOnRent"
+        android:label="CurrentVehicleOnRent"
+        tools:layout="@layout/fragment_vehicles_available">
+        <action
+            android:id="@+id/action_CurrentVehicleOnRent_to_User_Details"
+            app:destination="@id/User_Details" />
+    </fragment>
+    <fragment
+        android:id="@+id/ChangePass"
+        android:name="com.ochs.app.flexiicar_app.user.Fragment_Change_Password"
+        android:label="ChangePass"
+        tools:layout="@layout/fragment_changepassword">
+        <action
+            android:id="@+id/action_ChangePass_to_User_Details"
+            app:destination="@id/User_Details" />
+    </fragment>
+    <fragment
+        android:id="@+id/Edit_Personal_info"
+        android:name="com.ochs.app.flexiicar_app.user.Fragment_Update_Customer_Profile"
+        android:label="Edit_Personal_info"
+        tools:layout="@layout/fragment_update_customer_profile">
+        <action
+            android:id="@+id/action_Edit_Personal_info_to_User_Details"
+            app:destination="@id/User_Details" />
+    </fragment>
+
+    //Reservation Flow
+    <fragment
+        android:id="@+id/Reservation"
+        android:name="com.ochs.app.flexiicar_app.user.Fragment_Reservation"
+        android:label="Reservation"
+        tools:layout="@layout/fragment_reservation">
+        <action
+            android:id="@+id/action_Reservation_to_User_Details"
+            app:destination="@id/User_Details" />
+        <action
+            android:id="@+id/action_Reservation_to_SummaryOfCharges"
+            app:destination="@id/SummaryOfCharges" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/SummaryOfCharges"
+        android:name="com.ochs.app.flexiicar_app.user.Fragment_Summary_Of_Charges_For_Reservation"
+        android:label="SummaryOfCharges"
+        tools:layout="@layout/fragment_summary_of_charges">
+        <action
+            android:id="@+id/action_SummaryOfCharges_to_Reservation"
+            app:destination="@id/Reservation" />
+        <action
+            android:id="@+id/action_SummaryOfCharges_to_Self_check_Out"
+            app:destination="@id/Self_check_Out" />
+        <action
+            android:id="@+id/action_SummaryOfCharges_to_TermAndCondition"
+            app:destination="@id/TermAndCondition" />
+        <action
+            android:id="@+id/action_SummaryOfCharges_to_Total_tax_fee_details"
+            app:destination="@id/Total_tax_fee_details" />
+        <action
+            android:id="@+id/action_SummaryOfCharges_to_Select_addtional_options"
+            app:destination="@id/Select_addtional_options" />
+        <action
+            android:id="@+id/action_SummaryOfCharges_to_AddInsurancePolicy"
+            app:destination="@id/AddInsurancePolicy" />
+        <action
+            android:id="@+id/action_SummaryOfCharges_to_Add_Additional_Driver_Details"
+            app:destination="@id/Add_Additional_Driver_Details" />
+        <action
+            android:id="@+id/action_SummaryOfCharges_to_AddBillingDetails"
+            app:destination="@id/AddBillingDetails" />
+        <action
+            android:id="@+id/action_SummaryOfCharges_to_CancelBooking"
+            app:destination="@id/CancelBooking" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/AddInsurancePolicy"
+        android:name="com.ochs.app.flexiicar_app.user.Fragment_Add_Insurance_Policy_for_Reservation"
+        android:label="AddInsurancePolicy"
+        tools:layout="@layout/fragment_customer_insurance_update">
+        <action
+            android:id="@+id/action_AddInsurancePolicy_to_SummaryOfCharges"
+            app:destination="@id/SummaryOfCharges" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/AddBillingDetails"
+        android:name="com.ochs.app.flexiicar_app.user.Fragment_Add_Billing_Details"
+        android:label="AddBillingDetails"
+        tools:layout="@layout/fragment_add_billing_details">
+    <action
+        android:id="@+id/action_AddBillingDetails_to_SummaryOfCharges"
+        app:destination="@id/SummaryOfCharges" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/Add_Additional_Driver_Details"
+        android:name="com.ochs.app.flexiicar_app.user.Fragment_Additional_Driver_Details"
+        android:label="Add_Additional_Driver_Details"
+        tools:layout="@layout/fragment_additional_driver_details">
+        <action
+            android:id="@+id/action_Add_Additional_Driver_Details_to_Additional_Driver_List"
+            app:destination="@id/Additional_Driver_List" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/Additional_Driver_List"
+        android:name="com.ochs.app.flexiicar_app.user.Fragment_Additional_Driver_list"
+        android:label="Add_Additional_Driver_Details"
+        tools:layout="@layout/fragment_additional_driver_list">
+        <action
+            android:id="@+id/action_Additional_Driver_List_to_SummaryOfCharges"
+            app:destination="@id/SummaryOfCharges" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/CancelBooking"
+        android:name="com.ochs.app.flexiicar_app.user.Fragment_Cancel_Booking"
+        android:label="CancelBooking"
+        tools:layout="@layout/fragment_cancel_booking">
+        <action
+            android:id="@+id/action_CancelBooking_to_SummaryOfCharges"
+            app:destination="@id/SummaryOfCharges" />
+        <action
+            android:id="@+id/action_CancelBooking_to_PayCheckoutForCancelBooking"
+            app:destination="@id/PayCheckoutForCancelBooking" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/PayCheckoutForCancelBooking"
+        android:name="com.ochs.app.flexiicar_app.user.Fragment_Cancel_Booking_Payment_CheckOut"
+        android:label="PayCheckoutForCancelBooking"
+        tools:layout="@layout/fragment_payment_checkout_process">
+
+        <action
+            android:id="@+id/action_PayCheckoutForCancelBooking_to_CardsOnAccount"
+            app:destination="@id/CardsOnAccount" />
+        <action
+            android:id="@+id/action_PayCheckoutForCancelBooking_to_CancelBooking"
+            app:destination="@id/CancelBooking" />
+        <action
+            android:id="@+id/action_PayCheckoutForCancelBooking_to_Payment_Success"
+            app:destination="@id/Payment_Success" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/Select_addtional_options"
+        android:name="com.ochs.app.flexiicar_app.user.Fragment_Select_addition_Options_For_User"
+        android:label="Select_addtional_options"
+        tools:layout="@layout/fragment_select_additional_option">
+        <action
+            android:id="@+id/action_Select_addtional_options_to_Finalize_your_rental"
+            app:destination="@id/Finalize_your_rental" />
+        <action
+            android:id="@+id/action_Select_addtional_options_to_SummaryOfCharges"
+            app:destination="@id/SummaryOfCharges" />
+        <action
+            android:id="@+id/action_Select_addtional_options_to_FilterByVehicleClass"
+            app:destination="@id/FilterByVehicleClass" />
+        <action
+            android:id="@+id/action_Select_addtional_options_to_User_Details"
+            app:destination="@id/User_Details" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/FilterByVehicleClass"
+        android:name="com.ochs.app.flexiicar_app.user.Fragment_Filter_By_Vehicle_Class_For_User"
+        android:label="FilterByVehicleClass"
+        tools:layout="@layout/fragment_filterby_vehicle_class">
+        <action
+            android:id="@+id/action_FilterByVehicleClass_to_Select_addtional_options"
+            app:destination="@id/Select_addtional_options" />
+        <action
+            android:id="@+id/action_FilterByVehicleClass_to_MapScreenSearchAddress"
+            app:destination="@id/MapScreenSearchAddress" />
+        <action
+            android:id="@+id/action_FilterByVehicleClass_to_Reservation"
+            app:destination="@id/Reservation" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/MapScreenSearchAddress"
+        android:name="com.ochs.app.flexiicar_app.commonfragment.Fragment_Map_Screen_Search"
+        android:label="MapScreenSearchAddress"
+        tools:layout="@layout/fragment_map_screen_search">
+        <action
+            android:id="@+id/action_MapScreenSearchAddress_to_FilterByVehicleClass"
+            app:destination="@id/FilterByVehicleClass" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/Finalize_your_rental"
+        android:name="com.ochs.app.flexiicar_app.user.Fragment_Finalize_Your_Rental_For_User"
+        android:label="Finalize_your_rental"
+        tools:layout="@layout/fragment_finalize_your_rental">
+        <action
+            android:id="@+id/action_Finalize_your_rental_to_TermAndCondition"
+            app:destination="@id/TermAndCondition" />
+        <action
+            android:id="@+id/action_Finalize_your_rental_to_Total_tax_fee_details"
+            app:destination="@id/Total_tax_fee_details" />
+        <action
+            android:id="@+id/action_Finalize_your_rental_to_Select_addtional_options"
+            app:destination="@id/Select_addtional_options" />
+        <action
+            android:id="@+id/action_Finalize_your_rental_to_Payment_checkout"
+            app:destination="@id/Payment_checkout" />
+        <action
+            android:id="@+id/action_Finalize_your_rental_to_flight_details"
+            app:destination="@id/flight_details"/>
+        <action
+            android:id="@+id/action_Finalize_your_rental_to_User_Details"
+            app:destination="@id/User_Details" />
+    </fragment>
+    <fragment
+        android:id="@+id/Total_tax_fee_details"
+        android:name="com.ochs.app.flexiicar_app.commonfragment.Fragment_Details_of_tax_fees"
+        android:label="Total_tax_fee_details"
+        tools:layout="@layout/fragment_details_of_tax_fee_applicable">
+        <action
+            android:id="@+id/action_Total_tax_fee_details_to_SummaryOfCharges"
+            app:destination="@id/SummaryOfCharges" />
+        <action
+            android:id="@+id/action_Total_tax_fee_details_to_SummaryOfChargesForAgreements"
+            app:destination="@id/SummaryOfChargesForAgreements" />
+        <action
+            android:id="@+id/action_Total_tax_fee_details_to_Finalize_your_rental"
+            app:destination="@id/Finalize_your_rental" />
+        <action
+            android:id="@+id/action_Total_tax_fee_details_to_SummaryOfChargeForSelfCheckIn"
+            app:destination="@id/SummaryOfChargeForSelfCheckIn" />
+
+        <action
+            android:id="@+id/action_Total_tax_fee_details_to_Reservation"
+            app:destination="@id/Reservation" />
+        <action
+            android:id="@+id/action_Total_tax_fee_details_to_Agreements"
+            app:destination="@id/Agreements" />
+    </fragment>
+    <fragment
+        android:id="@+id/TermAndCondition"
+        android:name="com.ochs.app.flexiicar_app.commonfragment.Fragment_Term_And_Condition"
+        android:label="TermAndCondition"
+        tools:layout="@layout/fragment_terms_and_conditions">
+        <action
+            android:id="@+id/action_TermAndCondition_to_SummaryOfCharges"
+            app:destination="@id/SummaryOfCharges" />
+        <action
+            android:id="@+id/action_TermAndCondition_to_SummaryOfChargesForAgreements"
+            app:destination="@id/SummaryOfChargesForAgreements" />
+        <action
+            android:id="@+id/action_TermAndCondition_to_Finalize_your_rental"
+            app:destination="@id/Finalize_your_rental" />
+        <action
+            android:id="@+id/action_TermAndCondition_to_SummaryOfChargeForSelfCheckIn"
+            app:destination="@id/SummaryOfChargeForSelfCheckIn" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/flight_details"
+        android:name="com.ochs.app.flexiicar_app.commonfragment.Fragment_Flight_Details"
+        android:label="flight_details"
+        tools:layout="@layout/fragment_flight_details">
+        <action
+            android:id="@+id/action_flight_details_to_Finalize_your_rental"
+            app:destination="@id/Finalize_your_rental" />
+        <action
+            android:id="@+id/action_flight_details_to_Reservation"
+            app:destination="@id/Reservation" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/Payment_checkout"
+        android:name="com.ochs.app.flexiicar_app.user.Fragment_Payment_CheckOut_For_User"
+        android:label="Payment_checkout"
+        tools:layout="@layout/fragment_payment_checkout_process">
+
+        <action
+            android:id="@+id/action_Payment_checkout_to_CardsOnAccount"
+            app:destination="@id/CardsOnAccount" />
+        <action
+            android:id="@+id/action_Payment_checkout_to_Finalize_your_rental"
+            app:destination="@id/Finalize_your_rental" />
+        <action
+            android:id="@+id/action_Payment_checkout_to_Payment_Success"
+            app:destination="@id/Payment_Success" />
+
+    </fragment>
+
+    //User TimeLine
+    <fragment
+        android:id="@+id/User_timeline"
+        android:name="com.ochs.app.flexiicar_app.user.Fragment_User_Timeline"
+        android:label="User_timeline"
+        tools:layout="@layout/fragment_user_timeline">
+        <action
+            android:id="@+id/action_User_timeline_to_Poston_Your_Timeline"
+            app:destination="@id/Poston_Your_Timeline" />
+        <action
+            android:id="@+id/action_User_timeline_to_Update_CutomerActivity"
+            app:destination="@id/Update_CutomerActivity" />
+        <action
+            android:id="@+id/action_User_timeline_to_User_Details"
+            app:destination="@id/User_Details" />
+    </fragment>
+    <fragment
+        android:id="@+id/Poston_Your_Timeline"
+        android:name="com.ochs.app.flexiicar_app.user.Fragment_Add_Customer_Activity"
+        android:label="Post_on_Your_Timeline"
+        tools:layout="@layout/fragment_add_customer_activity">
+        <action
+            android:id="@+id/action_Poston_Your_Timeline_to_User_timeline"
+            app:destination="@id/User_timeline" />
+    </fragment>
+    <fragment
+        android:id="@+id/Update_CutomerActivity"
+        android:name="com.ochs.app.flexiicar_app.user.Fragment_Update_Customer_Activity"
+        android:label="Post_on_Your_Timeline"
+        tools:layout="@layout/fragment_add_customer_activity">
+        <action
+            android:id="@+id/action_Update_CutomerActivity_to_User_timeline"
+            app:destination="@id/User_timeline" />
+    </fragment>
+
+    //Account Statment
+    <fragment
+        android:id="@+id/Bills_and_Payment"
+        android:name="com.ochs.app.flexiicar_app.user.Fragment_Bills_And_Payment"
+        android:label="Bills_and_Payment"
+        tools:layout="@layout/fragment_bills_and_payments">
+        <action
+            android:id="@+id/action_Bills_and_Payment_to_Traffic_Ticket_Image"
+            app:destination="@id/Traffic_Ticket_Image" />
+        <action
+            android:id="@+id/action_Bills_and_Payment_to_User_Details"
+            app:destination="@id/User_Details" />
+        <action
+            android:id="@+id/action_Bills_and_Payment_to_Invoice_Image"
+            app:destination="@id/Invoice_Image" />
+        <action
+            android:id="@+id/action_Bills_and_Payment_to_Payment_Reciept_2"
+            app:destination="@id/Payment_Reciept_2" />
+        <action
+            android:id="@+id/action_Bills_and_Payment_to_TollCharge_Image"
+            app:destination="@id/TollCharge_Image" />
+        <action
+            android:id="@+id/action_Bills_and_Payment_to_BillsPayment_Filter"
+            app:destination="@id/BillsPayment_Filter" />
+    </fragment>
+    <fragment
+        android:id="@+id/BillsPayment_Filter"
+        android:name="com.ochs.app.flexiicar_app.user.Fragment_Bills_And_Payment_Filter"
+        android:label="BillsPayment_Filter"
+        tools:layout="@layout/fragment_bills_and_payments_filter">
+        <action
+            android:id="@+id/action_BillsPayment_Filter_to_Bills_and_Payment"
+            app:destination="@id/Bills_and_Payment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/Traffic_Ticket"
+        android:name="com.ochs.app.flexiicar_app.user.Fragment_Traffic_Ticket"
+        android:label="Traffic_Ticket"
+        tools:layout="@layout/fragment_traffic_ticket">
+        <action
+            android:id="@+id/action_Traffic_Ticket_to_Traffic_Ticket_2"
+            app:destination="@id/Traffic_Ticket_2" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/Traffic_Ticket_Image"
+        android:name="com.ochs.app.flexiicar_app.user.Fragment_Traffic_Ticket_Image"
+        android:label="Traffic_Ticket_Image"
+        tools:layout="@layout/fragment_traffic_ticket_image">
+        <action
+            android:id="@+id/action_Traffic_Ticket_Image_to_Bills_and_Payment"
+            app:destination="@id/Bills_and_Payment" />
+        <action
+            android:id="@+id/action_Traffic_Ticket_Image_to_Payment_Success"
+            app:destination="@id/Payment_Success" />
+        <action
+            android:id="@+id/action_Traffic_Ticket_Image_to_CardsOnAccount"
+            app:destination="@id/CardsOnAccount" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/Payment_Success"
+        android:name="com.ochs.app.flexiicar_app.commonfragment.Fragment_Payment_checkout_Success"
+        android:label="Payment_Success"
+        tools:layout="@layout/fragment_payment_checkout_success">
+        <action
+            android:id="@+id/action_Payment_Success_to_Bills_and_Payment"
+            app:destination="@id/Bills_and_Payment" />
+        <action
+            android:id="@+id/action_Payment_Success_to_WaiverSign_ForSelfCheckIn"
+            app:destination="@id/WaiverSign_ForSelfCheckIn" />
+        <action
+            android:id="@+id/action_Payment_Success_to_SummaryOfCharges"
+            app:destination="@id/SummaryOfCharges" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/Traffic_Ticket_2"
+        android:name="com.ochs.app.flexiicar_app.user.Fragment_Traffic_ticket_2"
+        android:label="Traffic_Ticket_2"
+        tools:layout="@layout/fragment_traffic_ticket_2">
+
+        <action
+            android:id="@+id/action_Traffic_Ticket_2_to_Traffic_Ticket"
+            app:destination="@id/Traffic_Ticket" />
+    </fragment>
+    <fragment
+        android:id="@+id/Invoice_Image"
+        android:name="com.ochs.app.flexiicar_app.user.Fragment_Invoice_image"
+        android:label="Invoice_Image"
+        tools:layout="@layout/fragment_invoice_image">
+        <action
+            android:id="@+id/action_Invoice_Image_to_Bills_and_Payment"
+            app:destination="@id/Bills_and_Payment" />
+        <action
+            android:id="@+id/action_Invoice_Image_to_Payment_Success"
+            app:destination="@id/Payment_Success" />
+        <action
+            android:id="@+id/action_Invoice_Image_to_CardsOnAccount"
+            app:destination="@id/CardsOnAccount" />
+    </fragment>
+    <fragment
+        android:id="@+id/TollCharge_Image"
+        android:name="com.ochs.app.flexiicar_app.user.Fragment_TollCharge_Image"
+        android:label="TollCharge_Image"
+        tools:layout="@layout/fragment_tollcharge_image">
+        <action
+            android:id="@+id/action_TollCharge_Image_to_Bills_and_Payment"
+            app:destination="@id/Bills_and_Payment" />
+        <action
+            android:id="@+id/action_TollCharge_to_Payment_Success"
+            app:destination="@id/Payment_Success" />
+        <action
+            android:id="@+id/action_TollCharge_to_CardsOnAccount"
+            app:destination="@id/CardsOnAccount" />
+    </fragment>
+    <fragment
+        android:id="@+id/Payment_Reciept"
+        android:name="com.ochs.app.flexiicar_app.user.Fragment_Payment_Reciept"
+        android:label="Payment_Reciept"
+        tools:layout="@layout/fragment_payment_receipt">
+    </fragment>
+
+    <fragment
+        android:id="@+id/Payment_Reciept_2"
+        android:name="com.ochs.app.flexiicar_app.user.Fragment_Payment_Reciept_2"
+        android:label="Payment_Reciept"
+        tools:layout="@layout/fragment_payment_receipt_2">
+        <action
+            android:id="@+id/action_Payment_Reciept_2_to_Bills_and_Payment"
+            app:destination="@id/Bills_and_Payment" />
+        <action
+            android:id="@+id/action_Payment_Reciept_2_Payment_Success"
+            app:destination="@id/Payment_Success" />
+        <action
+            android:id="@+id/action_Payment_Reciept_2_to_CardsOnAccount"
+            app:destination="@id/CardsOnAccount" />
+    </fragment>
+
+
+    //DrivingLicense_Details
+    <fragment
+        android:id="@+id/DrivingLicense_Details"
+        android:name="com.ochs.app.flexiicar_app.user.Fragment_Driving_License_List"
+        android:label="DrivingLicense_Details"
+        tools:layout="@layout/fragment_driving_license_list">
+        <action
+            android:id="@+id/action_DrivingLicense_Details_to_User_Details"
+            app:destination="@id/User_Details" />
+        <action
+            android:id="@+id/action_DrivingLicense_Details_to_DrivingLicense_Update"
+            app:destination="@id/DrivingLicense_Update" />
+        <action
+            android:id="@+id/action_DrivingLicense_Details_to_DrivingLicense_Add"
+            app:destination="@id/DrivingLicense_Add" />
+        <action
+            android:id="@+id/action_DrivingLicense_Details_to_SummaryOfCharges"
+            app:destination="@id/SummaryOfCharges" />
+    </fragment>
+    <fragment
+        android:id="@+id/DrivingLicense_Add"
+        android:name="com.ochs.app.flexiicar_app.user.Fragment_Driving_License_Add"
+        android:label="DrivingLicense_Add"
+        tools:layout="@layout/fragment_driving_license_add_update">
+        <action
+            android:id="@+id/action_DrivingLicense_Add_to_DrivingLicense_Details"
+            app:destination="@id/DrivingLicense_Details" />
+    </fragment>
+    <fragment
+        android:id="@+id/DrivingLicense_Update"
+        android:name="com.ochs.app.flexiicar_app.user.Fragment_Driving_License_Update"
+        android:label="DrivingLicense_Details2"
+        tools:layout="@layout/fragment_driving_license_add_update">
+        <action
+            android:id="@+id/action_DrivingLicense_Update_to_DrivingLicense_Details"
+            app:destination="@id/DrivingLicense_Details" />
+    </fragment>
+
+    //InsurancePolicy
+    <fragment
+        android:id="@+id/InsurancePolicyList"
+        android:name="com.ochs.app.flexiicar_app.user.Fragment_Insurance_Policy_list"
+        android:label="InsurancePolicyList"
+        tools:layout="@layout/fragment_customer_insurance_list">
+        <action
+            android:id="@+id/action_InsurancePolicyList_to_InsurancePolicyUpdate"
+            app:destination="@id/InsurancePolicyUpdate" />
+        <action
+            android:id="@+id/action_InsurancePolicyList_to_User_Details"
+            app:destination="@id/User_Details" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/InsurancePolicyUpdate"
+        android:name="com.ochs.app.flexiicar_app.user.Fragment_Insurance_Policy_Update"
+        android:label="InsurancePolicyUpdate"
+        tools:layout="@layout/fragment_customer_insurance_update">
+        <action
+            android:id="@+id/action_InsurancePolicyUpdate_to_InsurancePolicyList"
+            app:destination="@id/InsurancePolicyList" />
+    </fragment>
+
+    //Credit Card List
+    <fragment
+        android:id="@+id/CardsOnAccount"
+        android:name="com.ochs.app.flexiicar_app.user.Fragment_CreditCards_List_For_User"
+        android:label="CardsOnAccount"
+        tools:layout="@layout/fragment_creditcards_list">
+        <action
+            android:id="@+id/action_CardsOnAccount_to_UpdateCreditCard"
+            app:destination="@id/UpdateCreditCard" />
+        <action
+            android:id="@+id/action_CardsOnAccount_to_AddCreditCard"
+            app:destination="@id/AddCreditCard" />
+        <action
+            android:id="@+id/action_CardsOnAccount_to_User_Details"
+            app:destination="@id/User_Details" />
+        <action
+            android:id="@+id/action_CardsOnAccount_to_TollCharge_Image"
+            app:destination="@id/TollCharge_Image" />
+        <action
+            android:id="@+id/action_CardsOnAccount_to_Payment_Reciept_2"
+            app:destination="@id/Payment_Reciept_2" />
+        <action
+            android:id="@+id/action_CardsOnAccount_to_Invoice_Image"
+            app:destination="@id/Invoice_Image" />
+        <action
+            android:id="@+id/action_CardsOnAccount_to_Traffic_Ticket_Image"
+            app:destination="@id/Traffic_Ticket_Image" />
+        <action
+            android:id="@+id/action_CardsOnAccount_to_Payment_checkout"
+            app:destination="@id/Payment_checkout" />
+        <action
+            android:id="@+id/action_CardsOnAccount_to_PaymentCheckOutSelfCheckIn"
+            app:destination="@id/PaymentCheckOutSelfCheckIn" />
+        <action
+            android:id="@+id/action_CardsOnAccount_to_PayCheckoutForCancelBooking"
+            app:destination="@id/PayCheckoutForCancelBooking" />
+    </fragment>
+    <fragment
+        android:id="@+id/AddCreditCard"
+        android:name="com.ochs.app.flexiicar_app.user.Fragment_Add_credit_card_For_User"
+        android:label="AddCreditCard"
+        tools:layout="@layout/fragment_add_creditcard">
+        <action
+            android:id="@+id/action_AddCreditCard_to_CardsOnAccount"
+            app:destination="@id/CardsOnAccount" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/UpdateCreditCard"
+        android:name="com.ochs.app.flexiicar_app.user.Fragment_Update_CreditCard_For_user"
+        android:label="EditCreditCard"
+        tools:layout="@layout/fragment_update_creditcard">
+        <action
+            android:id="@+id/action_UpdateCreditCard_to_CardsOnAccount"
+            app:destination="@id/CardsOnAccount" />
+    </fragment>
+
+
+
+ //Self CheckOut
+    <fragment
+        android:id="@+id/Agreements"
+        android:name="com.ochs.app.flexiicar_app.user.Fragment_Agreements"
+        android:label="Agreements"
+        tools:layout="@layout/fragment_agreements">
+        <action
+            android:id="@+id/action_Agreements_to_User_Details"
+            app:destination="@id/User_Details" />
+        <action
+            android:id="@+id/action_Agreements_to_SummaryOfChargesForAgreements"
+            app:destination="@id/SummaryOfChargesForAgreements" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/SummaryOfChargesForAgreements"
+        android:name="com.ochs.app.flexiicar_app.user.Fragment_Summary_Of_Charges_For_Agreements"
+        android:label="SummaryOfChargesForAgreements"
+        tools:layout="@layout/fragment_summary_of_charges_for_agreements">
+        <action
+            android:id="@+id/action_SummaryOfChargesForAgreements_to_Agreements"
+            app:destination="@id/Agreements" />
+        <action
+            android:id="@+id/action_SummaryOfChargesForAgreements_to_TermAndCondition"
+            app:destination="@id/TermAndCondition" />
+        <action
+            android:id="@+id/action_SummaryOfChargesForAgreements_to_Total_tax_fee_details"
+            app:destination="@id/Total_tax_fee_details" />
+        <action
+            android:id="@+id/action_SummaryOfChargesForAgreements_to_Self_check_Out"
+            app:destination="@id/Self_check_Out" />
+        <action
+            android:id="@+id/action_SummaryOfChargesForAgreements_to_LocationKey_ForSelfCheckOut"
+            app:destination="@id/LocationKey_ForSelfCheckOut" />
+        <action
+            android:id="@+id/action_SummaryOfChargesForAgreements_to_User_Details"
+            app:destination="@id/User_Details" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/Self_check_Out"
+        android:name="com.ochs.app.flexiicar_app.selfcheckout.Fragment_Self_Check_out"
+        android:label="Self_check_Out"
+        tools:layout="@layout/fragment_self_checkout">
+        <action
+            android:id="@+id/action_Self_check_Out_to_SummaryOfChargesForAgreements"
+            app:destination="@id/SummaryOfChargesForAgreements" />
+        <action
+            android:id="@+id/action_Self_check_Out_to_Vehicle_Image_1"
+            app:destination="@id/Vehicle_Image_1" />
+        <action
+            android:id="@+id/action_Self_check_Out_to_User_Details"
+            app:destination="@id/User_Details" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/Vehicle_Image_1"
+        android:name="com.ochs.app.flexiicar_app.selfcheckout.Fragment_Vehicle_Image_1"
+        android:label="Vehicle_Image_1"
+        tools:layout="@layout/fragment_vehicle_images_1">
+        <action
+            android:id="@+id/action_Vehicle_Image_1_to_Self_check_Out"
+            app:destination="@id/Self_check_Out" />
+        <action
+            android:id="@+id/action_Vehicle_img_1_to_Vehicle_img_2"
+            app:destination="@id/Vehicle_img_2" />
+        <action
+            android:id="@+id/action_Vehicle_Image_1_to_User_Details"
+            app:destination="@id/User_Details" />
+    </fragment>
+    <fragment
+        android:id="@+id/Vehicle_img_2"
+        android:name="com.ochs.app.flexiicar_app.selfcheckout.Fragment_Vehicle_Image_2"
+        android:label="Vehicle_img_2"
+        tools:layout="@layout/fragment_vehicle_images_2">
+        <action
+            android:id="@+id/action_Vehicle_img_2_to_Vehicle_Image_1"
+            app:destination="@id/Vehicle_Image_1" />
+        <action
+            android:id="@+id/action_Vehicle_img_2_to_Vehicle_Image_3"
+            app:destination="@id/Vehicle_Image_3" />
+        <action
+            android:id="@+id/action_Vehicle_img_2_to_User_Details"
+            app:destination="@id/User_Details" />
+    </fragment>
+    <fragment
+        android:id="@+id/Vehicle_Image_3"
+        android:name="com.ochs.app.flexiicar_app.selfcheckout.Fragment_Vehicle_Image_3"
+        android:label="Vehicle_Image_3"
+        tools:layout="@layout/fragment_vehicle_images_3">
+        <action
+            android:id="@+id/action_Vehicle_Image_3_to_Vehicle_img_2"
+            app:destination="@id/Vehicle_img_2" />
+        <action
+            android:id="@+id/action_Vehicle_Image_3_to_Vehicle_Image_4"
+            app:destination="@id/Vehicle_Image_4" />
+        <action
+            android:id="@+id/action_Vehicle_Image_3_to_User_Details"
+            app:destination="@id/User_Details" />
+    </fragment>
+    <fragment
+        android:id="@+id/Vehicle_Image_4"
+        android:name="com.ochs.app.flexiicar_app.selfcheckout.Fragment_Vehicle_Image_4"
+        android:label="Vehicle_img_Passengerside"
+        tools:layout="@layout/fragment_vehicle_images_4">
+        <action
+            android:id="@+id/action_Vehicle_Image_4_to_Vehicle_Image_3"
+            app:destination="@id/Vehicle_Image_3" />
+        <action
+            android:id="@+id/action_Vehicle_Image_4_to_Vehicle_Image_5"
+            app:destination="@id/Vehicle_Image_5" />
+        <action
+            android:id="@+id/action_Vehicle_Image_4_to_User_Details"
+            app:destination="@id/User_Details" />
+    </fragment>
+    <fragment
+        android:id="@+id/Vehicle_Image_5"
+        android:name="com.ochs.app.flexiicar_app.selfcheckout.Fragment_Vehicle_Image_5"
+        android:label="Vehicle_Image_5"
+        tools:layout="@layout/fragment_vehicle_images_5">
+        <action
+            android:id="@+id/action_Vehicle_Image_5_to_Vehicle_Image_4"
+            app:destination="@id/Vehicle_Image_4" />
+        <action
+            android:id="@+id/action_Vehicle_Image_5_to_Vehicle_Image_6"
+            app:destination="@id/Vehicle_Image_6" />
+        <action
+            android:id="@+id/action_Vehicle_Image_5_to_User_Details"
+            app:destination="@id/User_Details" />
+    </fragment>
+    <fragment
+        android:id="@+id/Vehicle_Image_6"
+        android:name="com.ochs.app.flexiicar_app.selfcheckout.Fragment_Vehicle_Image_6"
+        android:label="Vehicle_Image_6"
+        tools:layout="@layout/fragment_vehicle_images_6">
+        <action
+            android:id="@+id/action_Vehicle_Image_6_to_Vehicle_Image_5"
+            app:destination="@id/Vehicle_Image_5" />
+        <action
+            android:id="@+id/action_Vehicle_Image_6_to_Vehicle_Image_7"
+            app:destination="@id/Vehicle_Image_7" />
+        <action
+            android:id="@+id/action_Vehicle_Image_6_to_User_Details"
+            app:destination="@id/User_Details" />
+    </fragment>
+    <fragment
+        android:id="@+id/Vehicle_Image_7"
+        android:name="com.ochs.app.flexiicar_app.selfcheckout.Fragment_Vehicle_Image_7"
+        android:label="Vehicle_Image_7"
+        tools:layout="@layout/fragment_vehicle_images_7">
+        <action
+            android:id="@+id/action_Vehicle_Image_7_to_Vehicle_Image_6"
+            app:destination="@id/Vehicle_Image_6" />
+        <action
+            android:id="@+id/action_Vehicle_Image_7_to_Vehicle_Image_8"
+            app:destination="@id/Vehicle_Image_8" />
+        <action
+            android:id="@+id/action_Vehicle_Image_7_to_User_Details"
+            app:destination="@id/User_Details" />
+    </fragment>
+    <fragment
+        android:id="@+id/Vehicle_Image_8"
+        android:name="com.ochs.app.flexiicar_app.selfcheckout.Fragment_Vehicle_Image_8"
+        android:label="Vehicle_Image_8"
+        tools:layout="@layout/fragment_vehicle_images_8">
+        <action
+            android:id="@+id/action_Vehicle_Image_8_to_Vehicle_Image_7"
+            app:destination="@id/Vehicle_Image_7" />
+        <action
+            android:id="@+id/action_Vehicle_Image_8_to_Vehicle_Image_9"
+            app:destination="@id/Vehicle_Image_9" />
+        <action
+            android:id="@+id/action_Vehicle_Image_8_to_User_Details"
+            app:destination="@id/User_Details" />
+    </fragment>
+    <fragment
+        android:id="@+id/Vehicle_Image_9"
+        android:name="com.ochs.app.flexiicar_app.selfcheckout.Fragment_Vehicle_Image_9"
+        android:label="Vehicle_Image_9"
+        tools:layout="@layout/fragment_vehicle_images_9">
+        <action
+            android:id="@+id/action_VVehicle_Image_9_to_Vehicle_Image_8"
+            app:destination="@id/Vehicle_Image_8" />
+        <action
+            android:id="@+id/action_Vehicle_Image_9_to_Vehicle_Image_10"
+            app:destination="@id/Vehicle_Image_10" />
+        <action
+            android:id="@+id/action_Vehicle_Image_9_to_User_Details"
+            app:destination="@id/User_Details" />
+    </fragment>
+    <fragment
+        android:id="@+id/Vehicle_Image_10"
+        android:name="com.ochs.app.flexiicar_app.selfcheckout.Fragment_Vehicle_Image_10"
+        android:label="Vehicle_Image_10"
+        tools:layout="@layout/fragment_vehicle_images_10">
+        <action
+            android:id="@+id/action_Vehicle_Image_10_to_Vehicle_Image_9"
+            app:destination="@id/Vehicle_Image_9" />
+        <action
+            android:id="@+id/action_Vehicle_Image_10_to_Vehicle_Additional_image"
+            app:destination="@id/Vehicle_Additional_image" />
+        <action
+            android:id="@+id/action_Vehicle_Image_10_to_User_Details"
+            app:destination="@id/User_Details" />
+    </fragment>
+    <fragment
+        android:id="@+id/Vehicle_Additional_image"
+        android:name="com.ochs.app.flexiicar_app.selfcheckout.Fragment_Vehicle_Additional_Image_All"
+        android:label="Vehicle_Additional_image"
+        tools:layout="@layout/fragment_vehicle_images_additional_all">
+        <action
+            android:id="@+id/action_Vehicle_Additional_image_to_Vehicle_Image_10"
+            app:destination="@id/Vehicle_Image_10" />
+        <action
+            android:id="@+id/action_Vehicle_Additional_image_to_Acceptance_signature"
+            app:destination="@id/Acceptance_signature" />
+        <action
+            android:id="@+id/action_Vehicle_Additional_image_to_User_Details"
+            app:destination="@id/User_Details" />
+    </fragment>
+    <fragment
+        android:id="@+id/Acceptance_signature"
+        android:name="com.ochs.app.flexiicar_app.selfcheckout.Fragment_Acceptance_singnature"
+        android:label="Acceptance_signature"
+        tools:layout="@layout/fragment_acceptance_signature">
+        <action
+            android:id="@+id/action_Acceptance_signature_to_Vehicle_Additional_image"
+            app:destination="@id/Vehicle_Additional_image" />
+        <action
+            android:id="@+id/action_Acceptance_signature_to_Waiver_Signature"
+            app:destination="@id/Waiver_Signature" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/Waiver_Signature"
+        android:name="com.ochs.app.flexiicar_app.selfcheckout.Fragment_Waiver_Signature"
+        android:label="Waiver_Signature"
+        tools:layout="@layout/fragment_waiver_signature">
+        <action
+            android:id="@+id/action_Waiver_Signature_to_Acceptance_signature"
+            app:destination="@id/Acceptance_signature" />
+        <action
+            android:id="@+id/action_Waiver_Signature_to_Location_And_Key"
+            app:destination="@id/Location_And_Key" />
+        <action
+            android:id="@+id/action_Waiver_Signature_to_User_Details"
+            app:destination="@id/User_Details" />
+    </fragment>
+    <fragment
+        android:id="@+id/Location_And_Key"
+        android:name="com.ochs.app.flexiicar_app.selfcheckout.Fragment_Location_And_Key"
+        android:label="Location_And_Key"
+        tools:layout="@layout/fragment_location_and_key">
+        <action
+            android:id="@+id/action_Location_And_Key_to_Waiver_Signature"
+            app:destination="@id/Waiver_Signature" />
+
+        <action
+            android:id="@+id/action_Location_And_Key_to_SummaryOfChargesForAgreements"
+            app:destination="@id/SummaryOfChargesForAgreements" />
+    </fragment>
+
+  //Self CheckIn
+    <fragment
+        android:id="@+id/LocationKey_ForSelfCheckOut"
+        android:name="com.ochs.app.flexiicar_app.selfcheckin.Fragment_Location_And_Key"
+        android:label="Location_And_Key"
+        tools:layout="@layout/fragment_location_and_key">
+        <action
+            android:id="@+id/action_LocationKey_ForSelfCheckOut_to_SummaryOfChargesForAgreements"
+            app:destination="@id/SummaryOfChargesForAgreements" />
+        <action
+            android:id="@+id/action_Location_And_Key_to_VehImage_SelfCheckIn_1"
+            app:destination="@id/VehImage_SelfCheckIn_1" />
+    </fragment>
+
+        <fragment
+            android:id="@+id/VehImage_SelfCheckIn_1"
+            android:name="com.ochs.app.flexiicar_app.selfcheckin.Fragment_Vehicle_Image_1"
+            android:label="Vehicle_Image1_SelfCheckIn"
+            tools:layout="@layout/fragment_vehicle_images_1">
+            <action
+                android:id="@+id/action_VehImage_SelfCheckIn_1_to_LocationKey_ForSelfCheckOut"
+                app:destination="@id/LocationKey_ForSelfCheckOut" />
+            <action
+                android:id="@+id/action_VehImage_SelfCheckIn_1_to_VehImage_SelfCheckIn_2"
+                app:destination="@id/VehImage_SelfCheckIn_2" />
+            <action
+                android:id="@+id/action_VehImage_SelfCheckIn_1_to_User_Details"
+                app:destination="@id/User_Details" />
+        </fragment>
+
+        <fragment
+            android:id="@+id/VehImage_SelfCheckIn_2"
+            android:name="com.ochs.app.flexiicar_app.selfcheckin.Fragment_Vehicle_Image_2"
+            android:label="Vehicle_Image2_SelfCheckIn"
+            tools:layout="@layout/fragment_vehicle_images_2">
+            <action
+                android:id="@+id/action_VehImage_SelfCheckIn_2_to_VehImage_SelfCheckIn_1"
+                app:destination="@id/VehImage_SelfCheckIn_1" />
+            <action
+                android:id="@+id/action_VehImage_SelfCheckIn_2_to_VehImage_SelfCheckIn_3"
+                app:destination="@id/VehImage_SelfCheckIn_3" />
+            <action
+                android:id="@+id/action_VehImage_SelfCheckIn_2_to_User_Details"
+                app:destination="@id/User_Details" />
+        </fragment>
+        <fragment
+            android:id="@+id/VehImage_SelfCheckIn_3"
+            android:name="com.ochs.app.flexiicar_app.selfcheckin.Fragment_Vehicle_Image_3"
+            android:label="Vehicle_Image3_SelfCheckIn"
+            tools:layout="@layout/fragment_vehicle_images_3">
+            <action
+                android:id="@+id/action_VehImage_SelfCheckIn_3_to_VehImage_SelfCheckIn_2"
+                app:destination="@id/VehImage_SelfCheckIn_2" />
+            <action
+                android:id="@+id/action_VehImage_SelfCheckIn_3_to_VehImage_SelfCheckIn_4"
+                app:destination="@id/VehImage_SelfCheckIn_4" />
+            <action
+                android:id="@+id/action_VehImage_SelfCheckIn_3_to_User_Details"
+                app:destination="@id/User_Details" />
+        </fragment>
+        <fragment
+            android:id="@+id/VehImage_SelfCheckIn_4"
+            android:name="com.ochs.app.flexiicar_app.selfcheckin.Fragment_Vehicle_Image_4"
+            android:label="Vehicle_Image4_SelfCheckIn"
+            tools:layout="@layout/fragment_vehicle_images_4">
+            <action
+                android:id="@+id/action_VehImage_SelfCheckIn_4_to_VehImage_SelfCheckIn_3"
+                app:destination="@id/VehImage_SelfCheckIn_3" />
+            <action
+                android:id="@+id/action_VehImage_SelfCheckIn_4_to_VehImage_SelfCheckIn_5n"
+                app:destination="@id/VehImage_SelfCheckIn_5" />
+            <action
+                android:id="@+id/action_VehImage_SelfCheckIn_4_to_User_Details"
+                app:destination="@id/User_Details" />
+        </fragment>
+        <fragment
+            android:id="@+id/VehImage_SelfCheckIn_5"
+            android:name="com.ochs.app.flexiicar_app.selfcheckin.Fragment_Vehicle_Image_5"
+            android:label="Vehicle_Image5_SelfCheckIn"
+            tools:layout="@layout/fragment_vehicle_images_5">
+            <action
+                android:id="@+id/action_VehImage_SelfCheckIn_5_to_VehImage_SelfCheckIn_4"
+                app:destination="@id/VehImage_SelfCheckIn_4" />
+            <action
+                android:id="@+id/action_VehImage_SelfCheckIn_5_to_VehImage_SelfCheckIn_6"
+                app:destination="@id/VehImage_SelfCheckIn_6" />
+            <action
+                android:id="@+id/action_VehImage_SelfCheckIn_5_to_User_Details"
+                app:destination="@id/User_Details" />
+        </fragment>
+        <fragment
+            android:id="@+id/VehImage_SelfCheckIn_6"
+            android:name="com.ochs.app.flexiicar_app.selfcheckin.Fragment_Vehicle_Image_6"
+            android:label="Vehicle_Image6_SelfCheckIn"
+            tools:layout="@layout/fragment_vehicle_images_6">
+            <action
+                android:id="@+id/action_VehImage_SelfCheckIn_6_to_VehImage_SelfCheckIn_5"
+                app:destination="@id/VehImage_SelfCheckIn_5" />
+            <action
+                android:id="@+id/action_VehImage_SelfCheckIn_6_to_VehImage_SelfCheckIn_7"
+                app:destination="@id/VehImage_SelfCheckIn_7" />
+            <action
+                android:id="@+id/action_VehImage_SelfCheckIn_6_to_User_Details"
+                app:destination="@id/User_Details" />
+        </fragment>
+        <fragment
+            android:id="@+id/VehImage_SelfCheckIn_7"
+            android:name="com.ochs.app.flexiicar_app.selfcheckin.Fragment_Vehicle_Image_7"
+            android:label="Vehicle_Image_7"
+            tools:layout="@layout/fragment_vehicle_images_7">
+            <action
+                android:id="@+id/action_VehImage_SelfCheckIn_7_to_VehImage_SelfCheckIn_6"
+                app:destination="@id/VehImage_SelfCheckIn_6" />
+            <action
+                android:id="@+id/action_Vehicle_Image_7_to_VehImage_SelfCheckIn_8"
+                app:destination="@id/VehImage_SelfCheckIn_8" />
+            <action
+                android:id="@+id/action_VehImage_SelfCheckIn_7_to_User_Details"
+                app:destination="@id/User_Details" />
+        </fragment>
+        <fragment
+            android:id="@+id/VehImage_SelfCheckIn_8"
+            android:name="com.ochs.app.flexiicar_app.selfcheckin.Fragment_Vehicle_Image_8"
+            android:label="Vehicle_Image_8"
+            tools:layout="@layout/fragment_vehicle_images_8">
+            <action
+                android:id="@+id/action_VehImage_SelfCheckIn_8_VehImage_SelfCheckIn_7"
+                app:destination="@id/VehImage_SelfCheckIn_7" />
+            <action
+                android:id="@+id/action_VehImage_SelfCheckIn_8_to_VehImage_SelfCheckIn_9"
+                app:destination="@id/VehImage_SelfCheckIn_9" />
+            <action
+                android:id="@+id/action_VehImage_SelfCheckIn_8_to_User_Details"
+                app:destination="@id/User_Details" />
+        </fragment>
+        <fragment
+            android:id="@+id/VehImage_SelfCheckIn_9"
+            android:name="com.ochs.app.flexiicar_app.selfcheckin.Fragment_Vehicle_Image_9"
+            android:label="Vehicle_Image_9"
+            tools:layout="@layout/fragment_vehicle_images_9">
+            <action
+                android:id="@+id/action_VehImage_SelfCheckIn_9_to_VehImage_SelfCheckIn_8"
+                app:destination="@id/VehImage_SelfCheckIn_8" />
+            <action
+                android:id="@+id/action_VehImage_SelfCheckIn_9_to_VehImage_SelfCheckIn_10"
+                app:destination="@id/VehImage_SelfCheckIn_10" />
+            <action
+                android:id="@+id/action_VehImage_SelfCheckIn_9_to_User_Details"
+                app:destination="@id/User_Details" />
+        </fragment>
+        <fragment
+            android:id="@+id/VehImage_SelfCheckIn_10"
+            android:name="com.ochs.app.flexiicar_app.selfcheckin.Fragment_Vehicle_Image_10"
+            android:label="Vehicle_Image_10"
+            tools:layout="@layout/fragment_vehicle_images_10">
+            <action
+                android:id="@+id/action_VehImage_SelfCheckIn_10_to_VehImage_SelfCheckIn_9"
+                app:destination="@id/VehImage_SelfCheckIn_9" />
+            <action
+                android:id="@+id/action_VehImage_SelfCheckIn_10_to_Vehicle_All_image_SelfCheckIn"
+                app:destination="@id/Vehicle_All_image_SelfCheckIn" />
+            <action
+                android:id="@+id/action_VehImage_SelfCheckIn_10_to_User_Details"
+                app:destination="@id/User_Details" />
+        </fragment>
+        <fragment
+            android:id="@+id/Vehicle_All_image_SelfCheckIn"
+            android:name="com.ochs.app.flexiicar_app.selfcheckin.Fragment_Vehicle_Additional_Image_All"
+            android:label="Vehicle_Additional_image"
+            tools:layout="@layout/fragment_vehicle_images_additional_all">
+            <action
+                android:id="@+id/action_Vehicle_All_image_SelfCheckIn_to_VehImage_SelfCheckIn_10"
+                app:destination="@id/VehImage_SelfCheckIn_10" />
+            <action
+                android:id="@+id/action_Vehicle_Additional_image_to_Signature"
+                app:destination="@id/Signature" />
+            <action
+                android:id="@+id/action_Vehicle_All_image_SelfCheckIn_to_User_Details"
+                app:destination="@id/User_Details" />
+        </fragment>
+
+      <fragment
+        android:id="@+id/Signature"
+        android:name="com.ochs.app.flexiicar_app.selfcheckin.Fragment_Acceptance_singnature"
+        android:label="Signature"
+        tools:layout="@layout/fragment_acceptance_signature">
+        <action
+            android:id="@+id/action_Signature_to_Vehicle_All_image_SelfCheckIn"
+            app:destination="@id/Vehicle_All_image_SelfCheckIn" />
+        <action
+            android:id="@+id/action_Signature_to_Self_check_In"
+            app:destination="@id/Self_check_In" />
+      </fragment>
+    <fragment
+        android:id="@+id/Self_check_In"
+        android:name="com.ochs.app.flexiicar_app.selfcheckin.Fragment_Self_Check_In"
+        android:label="Self_check_In"
+        tools:layout="@layout/fragment_self_checkin">
+        <action
+            android:id="@+id/action_Self_check_In_to_Signature"
+            app:destination="@id/Signature" />
+        <action
+            android:id="@+id/action_Self_check_In_to_SummaryOfChargeForSelfCheckIn"
+            app:destination="@id/SummaryOfChargeForSelfCheckIn" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/SummaryOfChargeForSelfCheckIn"
+        android:name="com.ochs.app.flexiicar_app.selfcheckin.Fragment_Summary_Of_Charges_For_SelfCheckIn"
+        android:label="SummaryOfChargeForSelfCheckIn"
+        tools:layout="@layout/fragment_summary_of_charges_for_selfcheckin">
+        <action
+            android:id="@+id/action_SummaryOfChargeForSelfCheckIn_to_Self_check_In"
+            app:destination="@id/Self_check_In" />
+        <action
+            android:id="@+id/action_SummaryOfChargeForSelfCheckIn_to_PaymentCheckOutSelfCheckIn"
+            app:destination="@id/PaymentCheckOutSelfCheckIn" />
+        <action
+            android:id="@+id/action_SummaryOfChargeForSelfCheckIn_to_TermAndCondition"
+            app:destination="@id/TermAndCondition" />
+        <action
+            android:id="@+id/action_SummaryOfChargeForSelfCheckIn_to_Total_tax_fee_details"
+            app:destination="@id/Total_tax_fee_details" />
+        <action
+            android:id="@+id/action_SummaryOfChargeForSelfCheckIn_to_Agreements"
+            app:destination="@id/Agreements" />
+    </fragment>
+    <fragment
+        android:id="@+id/PaymentCheckOutSelfCheckIn"
+        android:name="com.ochs.app.flexiicar_app.selfcheckin.Fragment_Payment_CheckOut_For_User_SelfCheckIn"
+        android:label="PaymentCheckOutSelfCheckIn"
+        tools:layout="@layout/fragment_payment_checkout_process">
+        <action
+            android:id="@+id/action_PaymentCheckOutSelfCheckIn_to_CardsOnAccount"
+            app:destination="@id/CardsOnAccount" />
+        <action
+            android:id="@+id/action_PaymentCheckOutSelfCheckIn_to_SummaryOfChargeForSelfCheckIn"
+            app:destination="@id/SummaryOfChargeForSelfCheckIn" />
+        <action
+            android:id="@+id/action_PaymentCheckOutSelfCheckIn_to_Payment_Success"
+            app:destination="@id/Payment_Success" />
+    </fragment>
+    <fragment
+        android:id="@+id/WaiverSign_ForSelfCheckIn"
+        android:name="com.ochs.app.flexiicar_app.selfcheckin.Fragment_Waiver_Signature_For_SelfCheckIn"
+        android:label="WaiverSign_ForSelfCheckIn"
+        tools:layout="@layout/fragment_waiver_signature">
+
+        <action
+            android:id="@+id/action_WaiverSign_ForSelfCheckIn_to_Payment_Success"
+            app:destination="@id/Payment_Success" />
+        <action
+            android:id="@+id/action_WaiverSign_ForSelfCheckIn_to_User_Details"
+            app:destination="@id/User_Details" />
+        <action
+            android:id="@+id/action_WaiverSign_ForSelfCheckIn_to_Agreements"
+            app:destination="@id/Agreements" />
+    </fragment>
+</navigation>

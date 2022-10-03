@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:background="@drawable/curve_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/ubuntu"
+            android:textAllCaps="true"
+            android:text="PRIMARY INSURANCE"
+            android:textColor="@color/selected_dot"
+            android:textSize="17dp" />
+        <TextView
+            android:id="@+id/View_InsDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="14dp"
+            android:fontFamily="@font/ubuntu_bold"
+            android:textAllCaps="true"
+            android:gravity="right"
+            android:text="View"
+            android:textColor="@color/selected_dot"
+            android:textSize="14dp" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/textColorHint"/>
+
+    <LinearLayout
+        android:id="@+id/llInsurancePolicy"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="7dp"
+            android:layout_marginLeft="7dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:gravity="center_vertical"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/img_drivingDoc"
+                    android:layout_width="100dp"
+                    android:layout_height="90dp"
+                    android:src="@drawable/insurance_img" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginLeft="8dp"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/lbl_primaryName"
+                        android:text="Josh Mansell"
+                        android:textSize="14dp"
+                        android:textColor="@color/selected_dot"
+                        android:fontFamily="@font/ubuntu_medium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_marginTop="2dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/lbl_TelephoneNo"
+                            android:text=""
+                            android:textSize="14dp"
+                            android:textColor="@color/selected_dot"
+                            android:fontFamily="@font/ubuntu_light"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_marginTop="2dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/lbl_UserEmail"
+                            android:text=""
+                            android:textSize="14dp"
+                            android:textColor="@color/selected_dot"
+                            android:fontFamily="@font/ubuntu_light"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginTop="1dp"
+            android:paddingBottom="5dp"
+            android:layout_marginRight="7dp"
+            android:layout_marginLeft="7dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:gravity="center_vertical"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/img_insuranceDoc"
+                    android:layout_width="100dp"
+                    android:layout_height="90dp"
+                    android:src="@drawable/insurance_img"/>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginLeft="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/ubuntu_medium"
+                        android:text="Insurance Detail"
+                        android:textColor="@color/selected_dot"
+                        android:textSize="14dp" />
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_marginTop="1dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/lbl_policy_No"
+                            android:text=""
+                            android:textSize="14dp"
+                            android:textColor="@color/selected_dot"
+                            android:fontFamily="@font/ubuntu_light"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="1dp"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/lbl_insurance_Cmp_Name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_light"
+                            android:text=""
+                            android:textColor="@color/selected_dot"
+                            android:textSize="14dp" />
+                    </RelativeLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_marginTop="1dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/lbl_ExpiryDateIns"
+                            android:text=""
+                            android:textSize="14dp"
+                            android:textColor="@color/selected_dot"
+                            android:fontFamily="@font/ubuntu_light"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_marginTop="1dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/lbl_IssueDateIns"
+                            android:text=""
+                            android:textSize="14dp"
+                            android:textColor="@color/selected_dot"
+                            android:fontFamily="@font/ubuntu_light"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

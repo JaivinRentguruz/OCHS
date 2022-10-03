@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/selected_dot"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="135dp"
+        android:id="@+id/selectlocation"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/Back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/BackImage"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bills &amp; payments"
+                    android:theme="@style/HeadertTitle"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/lbl_Discard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DISCARD"
+                android:theme="@style/textDiscard"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <EditText
+                android:id="@+id/edt_searchAccountStatment"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="8dp"
+                android:layout_weight="88"
+                android:background="@drawable/ic_rectangle_forsearch"
+                android:drawableRight="@drawable/ic_timeline_search_icon"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/ubuntu_light"
+                android:gravity="center_vertical"
+                android:hint="Search"
+                android:inputType="text"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp"
+                android:singleLine="true"
+                android:textColor="@color/registerTextColor"
+                android:textColorHint="@color/textColorHint"
+                android:textSize="@dimen/edt_font_size" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:id="@+id/filter_iconForAC"
+                android:layout_height="match_parent"
+                android:layout_weight="12"
+                android:layout_marginRight="15dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:background="@drawable/curved_box_bg">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/filter_icon"
+                        android:adjustViewBounds="true"
+                        android:layout_centerInParent="true"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/selectlocation"
+        android:layout_marginTop="0dp"
+        android:paddingTop="6dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:background="@drawable/curve_box">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:id="@+id/rl_AccountStatement"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

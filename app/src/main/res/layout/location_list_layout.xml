@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:background="@drawable/top_curve_black"
+        android:layout_width="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:layout_height="50dp">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:src="@drawable/ic_flexxicar_app_logo_50" />
+    </RelativeLayout>
+    <LinearLayout
+        android:background="@drawable/bottom_curve_white2"
+        android:layout_width="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/lbl_locTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" "
+            android:textSize="16dp"
+            android:layout_margin="2dp"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:fontFamily="@font/ubuntu_medium"
+            android:textColor="@color/selected_dot"/>
+        <TextView
+            android:id="@+id/lblstreet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="   "
+            android:textSize="10dp"
+            android:layout_margin="2dp"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:fontFamily="@font/ubuntu_light"
+            android:textColor="@color/selected_dot"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/lblcity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="   "
+                android:textSize="10dp"
+                android:layout_margin="2dp"
+                android:layout_gravity="center"
+                android:gravity="center_horizontal"
+                android:fontFamily="@font/ubuntu_light"
+                android:textColor="@color/selected_dot"/>
+            <TextView
+                android:id="@+id/lblzip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" "
+                android:textSize="10dp"
+                android:layout_margin="2dp"
+                android:layout_gravity="center"
+                android:gravity="center_horizontal"
+                android:fontFamily="@font/ubuntu_light"
+                android:textColor="@color/selected_dot"/>
+        </LinearLayout>
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/lblCountary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Canada"
+            android:textSize="10dp"
+            android:layout_margin="2dp"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:fontFamily="@font/ubuntu_light"
+            android:textColor="@color/selected_dot"/>
+        <TextView
+            android:id="@+id/lbl_Phone_no"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="  "
+            android:textSize="14dp"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:fontFamily="@font/ubuntu_light"
+            android:textColor="@color/footerButtonBC"/>
+        <LinearLayout
+            android:id="@+id/txt_Select_layout"
+            android:layout_width="70dp"
+            android:layout_margin="4dp"
+            android:layout_height="25dp"
+            android:background="@drawable/curved_box_bg"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntu"
+                android:text="SELECT"
+                android:textColor="@color/screen_bg_color"
+                android:textSize="12dp">
+            </TextView>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

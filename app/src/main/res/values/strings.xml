@@ -1,0 +1,126 @@
+<resources>
+    <string name="app_name">OCHS Rental</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <string name="title_activity_guide_screen">GuideScreen</string>
+    <string name="title_activity_on_boarding">OnBoarding</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="streetno">STREET NO &amp; NAME</string>
+    <string name="cp_additional_driver">This is our additional driver policy. Please read carefully.</string>
+    <string name="onBoardingScreen1Text">
+        NO COMMITMENT
+        \n\n
+        Return the car at\n any time! Just let \n us know one week \n in advance to allow \n for processing.
+    </string>
+
+    <string name="onBoardingScreen2Text">
+        HIGH MILEAGE
+        \n\n
+        Drive to your heart’s \n content! Our rental \n package allows for \n unlimited mileage! \n Enjoy your ride!
+    </string>
+
+    <string name="onBoardingScreen3Text">
+        TLC &amp; UBER READY
+        \n\n
+        Our vehicles are all \n registered and \n insured according to \n TLC regulations \n allowing you to start \n earning immediately.
+    </string>
+
+    <string name="id">id</string>
+    <string name="role">role</string>
+
+    <string-array name="passengerList">
+        <item>All</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+        <item>31</item>
+        <item>32</item>
+        <item>33</item>
+        <item>34</item>
+        <item>35</item>
+        <item>36</item>
+        <item>37</item>
+        <item>38</item>
+        <item>39</item>
+        <item>40</item>v
+    </string-array>
+
+    <string name="map_api_key">AIzaSyB8GVnpTSKV8BBBf3nqhHL4fmrFar3A5sM</string>
+
+    <string name="tax">Rates Taxes and Fees do not reflect rates taxes and fees applicable to non-\nincluded coverages,extras added later or to coverage required if the \ncustomer fails to provide acceptable proof of current liability coverage</string>
+
+    <string name="scan_back_side_id">Scan back side of document.</string>
+    <string name="classification_error">Could not classify the document</string>
+    <string name="classification_error_retry">Retry</string>
+    <string name="classification_error_image_preview">Image Preview</string>
+
+    <string-array name="Bill_Status">
+        <item>ALL</item>
+        <item>Unpaid</item>
+        <item>Paid</item>
+    </string-array>
+
+    <string-array name="Trans_Type">
+        <item>ALL</item>
+        <item>Payment</item>
+        <item>Invoice</item>
+        <item>Traffic Fine</item>
+        <item>Toll Charge</item>
+    </string-array>
+
+    <string name="membershipplandesc">Standard Base Rate, includes unlimited miles. Basic Insurance  included in this price with zero down and 2000$. Standard  Base Rate, includes unlimited miles. </string>
+    <string name="SpecialInstructor">This is a special instructions to the driver. This is a special instructions \n to the driver. This is a special instructions
+        to \n the driver. This is a special instructions to the driver. \n This is a special instructions to the driver. This is a special \n instructions to the
+        driver. This is a special instructions to \n the driver. This is a special instructions to the driver. This \n is a special instructions to the driver.
+        This is a special \n instructions to the driver. This is a special instructions to \n  the driver. This is a special instructions to the driver.
+        \n This is a special instructions to the driver. This is a special \n  instructions to the driver.</string>
+
+
+
+    <string name="bt_cvv">CVV</string>
+    <string name="bt_cvc">CVC</string>
+    <string name="bt_cid">CID</string>
+    <string name="bt_cvn">CVN</string>
+
+    <string name="VISA">VISA</string>
+    <string name="MASTER">MASTER CARD</string>
+    <string name="discover">discover</string>
+    <string name="amex">amex</string>
+    <string name="diners_club">diners_club</string>
+    <string name="jcb">jcb</string>
+    <string name="maestro">maestro</string>
+    <string name="unionpay">unionpay</string>
+    <string name="hiper">hiper</string>
+    <string name="hipercard">hipercard</string>
+    <string name="unknown">unknown</string>
+
+</resources>

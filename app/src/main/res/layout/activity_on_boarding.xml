@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".flexiicar_app.login.OnBoarding">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/onboarding_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <ImageView
+        android:id="@+id/section_logo_img"
+        android:layout_width="160dp"
+        android:layout_height="90dp"
+        android:adjustViewBounds="true"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/logo_version1"
+        android:background="@color/splash_screen_bg_color"
+        android:layout_marginTop="50dp"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_gravity="bottom"
+        android:paddingEnd="@dimen/activity_horizontal_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingStart="@dimen/activity_horizontal_margin">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/intro_indicator_0"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:background="@drawable/default_dot" />
+
+            <ImageView
+                android:id="@+id/intro_indicator_1"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/default_dot" />
+
+            <ImageView
+                android:id="@+id/intro_indicator_2"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:background="@drawable/default_dot" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,148 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+    <style name="FullscreenTheme" parent="AppTheme">
+        <item name="android:actionBarStyle">@style/FullscreenActionBarStyle</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="metaButtonBarStyle">?android:attr/buttonBarStyle</item>
+        <item name="metaButtonBarButtonStyle">?android:attr/buttonBarButtonStyle</item>
+    </style>
+
+    <style name="DialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">@color/selected_dot</item>
+    </style>
+
+    <style name="FullscreenActionBarStyle" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/black_overlay</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimaryDark">@color/selected_dot</item>
+        <item name="android:statusBarColor">@color/selected_dot</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="my_checkbox_style">
+        <item name="buttonTint">#fff</item>
+    </style>
+
+    <style name="WhiteCheck">
+        <item name="buttonTint">#fff</item>
+        <item name="android:colorBackground">#fff</item>
+        <item name="android:textColorSecondary">#333</item>
+    </style>
+
+    <style name="SwitchTheme" parent="Theme.AppCompat.Light">
+        <item name="android:colorControlActivated">#148E13</item>
+    </style>
+
+    <style name="SwitchThemepink" parent="Theme.AppCompat.Light">
+        <item name="android:colorControlActivated">#C74141</item>
+    </style>
+    <style name="SwitchThemeblue" parent="Theme.AppCompat.Light">
+        <item name="android:colorControlActivated">#00ABFF</item>
+    </style>
+
+    <style name="MyTabLayoutTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">13dp</item>
+        <item name="android:fontFamily">@font/ubuntu</item>
+    </style>
+    <style name="TransparentText" parent="@android:style/TextAppearance">
+        <item name="android:textColor">#00000000</item>
+    </style>
+
+    <style name="EditTextLoginScreen" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorControlNormal">@android:color/darker_gray</item>
+        <item name="colorControlActivated">@color/selected_dot</item>
+        <item name="colorControlHighlight">@color/selected_dot</item>
+    </style>
+
+    <style name="footertextview">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">14dp</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:fontFamily">@font/ubuntu_medium</item>
+        <item name="android:textColor">@color/TitleTextColor</item>
+    </style>
+
+    <style name="checkBoxStyle" parent="Base.Theme.AppCompat">
+        <item name="android:textColorSecondary">@color/textColorHint</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="BackImage">
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:paddingRight">12dp</item>
+        <item name="android:src">@drawable/ic_chevron_left</item>
+    </style>
+
+    <style name="HeadertTitle">
+        <item name="android:textSize">17dp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:fontFamily">@font/ubuntu_medium</item>
+        <item name="android:textColor">@color/TitleTextColor</item>
+    </style>
+
+    <style name="HeadertTitleforRegistration">
+        <item name="android:textSize">22dp</item>
+        <item name="android:fontFamily">@font/ubuntu_medium</item>
+        <item name="android:textColor">@color/TitleTextColor</item>
+    </style>
+
+    <style name="textDiscard">
+        <item name="android:textSize">14dp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:paddingRight">15dp</item>
+        <item name="android:fontFamily">@font/ubuntu_bold</item>
+        <item name="android:textColor">@color/TitleTextColor</item>
+    </style>
+
+    <style name="EditTextForRectangleBox_215">
+        <item name="android:padding">5dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:fontFamily">@font/ubuntu</item>
+        <item name="android:inputType">text</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorHint">@color/black</item>
+        <item name="android:textSize">@dimen/edt_font_size</item>
+        <item name="android:background">@drawable/ic_rectanglebox_215</item>
+    </style>
+
+    <style name="EditTextForRectangleBox_200">
+        <item name="android:padding">5dp</item>
+        <item name="android:fontFamily">@font/ubuntu</item>
+        <item name="android:inputType">text</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorHint">@color/black</item>
+        <item name="android:textSize">@dimen/edt_font_size</item>
+        <item name="android:background">@drawable/ic_rectangle_box_200</item>
+    </style>
+
+    <style name="fildtitletext">
+        <item name="android:fontFamily">@font/ubuntu</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/registerTextColor</item>
+        <item name="android:textSize">@dimen/txt_font_size</item>
+    </style>
+</resources>

@@ -1,0 +1,2 @@
+The QuickStartApp uses local *.aar libraries as dependencies, as access to the Huf Secure Mobile Maven repositories is restricted.
+In order to use modified versions of the libraries, either replace the AAR files in this folder with updated versions or change the Gradle configuration to use your own, protected Maven repository instead.

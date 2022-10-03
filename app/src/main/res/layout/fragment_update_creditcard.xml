@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/selected_dot"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editCreditCard"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="10dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/Back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/BackImage" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="update Credit card"
+                        android:theme="@style/HeadertTitle"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/lblDiscard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="disCARD"
+                    android:theme="@style/textDiscard"
+                    android:gravity="right"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+            <LinearLayout
+                android:background="@drawable/creditcardbg"
+                android:layout_margin="15dp"
+                android:orientation="vertical"
+                android:gravity="bottom"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/lbl_CardNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/TitleTextColor"
+                        android:textSize="26dp"
+                        android:fontFamily="@font/ubuntu_medium"
+                        android:text=" "/>
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="10dp"
+                    android:weightSum="10"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/lblCardholderName"
+                        android:layout_width="0dp"
+                        android:layout_weight="7"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/selected_dot"
+                        android:textSize="23dp"
+                        android:fontFamily="@font/ubuntu_medium"
+                        android:text=" "/>
+                    <TextView
+                        android:id="@+id/lbl_cardExpiryDate"
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_marginRight="10dp"
+                        android:gravity="right"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/ubuntu_medium"
+                        android:textSize="23dp"
+                        android:textColor="@color/TitleTextColor"
+                        android:text=""/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/editCreditCard"
+            android:paddingTop="2dp"
+            android:layout_marginBottom="48dp"
+            android:background="@drawable/curve_box">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:id="@+id/layout1"
+                    android:layout_centerVertical="true"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CARD NUMBER *"
+                        android:fontFamily="@font/ubuntu"
+                        android:textColor="@color/registerTextColor"
+                        android:textSize="@dimen/txt_font_size"
+                        android:layout_marginTop="10dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="10">
+
+                        <EditText
+                            android:id="@+id/edt_Card_No"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="8"
+                            android:padding="5dp"
+                            android:gravity="center_vertical"
+                            android:background="@drawable/ic_rectanglebox_cardno"
+                            android:layout_marginTop="8dp"
+                            android:textSize="@dimen/edt_font_size"
+                            android:inputType="number"
+                            android:maxLength="19"
+                            android:singleLine="true"
+                            android:hint="**** **** **** 7878"
+                            android:fontFamily="@font/ubuntu"
+                            android:textColor="@color/registerTextColor"/>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/ScanCard"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/scanimg" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:weightSum="2"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:text="Expiry Date *"
+                            android:textAllCaps="true"
+                            android:textSize="@dimen/txt_font_size"
+                            android:fontFamily="@font/ubuntu"
+                            android:textColor="@color/registerTextColor"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:fontFamily="@font/ubuntu"
+                            android:textColor="@color/registerTextColor"
+                            android:layout_marginLeft="17dp"
+                            android:text="CVV *"
+                            android:textAllCaps="true"
+                            android:textSize="@dimen/txt_font_size" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="2"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txtExpiryDate"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="5dp"
+                            android:gravity="center_vertical"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/ic_rectangle_light_215"
+                            android:textSize="@dimen/edt_font_size"
+                            android:fontFamily="@font/ubuntu"
+                            android:textColor="@color/registerTextColor"
+                            android:hint="MM/YY"
+                            android:drawableRight="@drawable/ic_calender"
+                            android:textColorHint="@color/textColorHint"/>
+
+                        <EditText
+                            android:id="@+id/edt_CVV"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/ic_rectangle_light_215"
+                            android:padding="5dp"
+                            android:gravity="center_vertical"
+                            android:maxLength="4"
+                            android:inputType="numberPassword"
+                            android:fontFamily="@font/ubuntu"
+                            android:textColor="@color/registerTextColor"
+                            android:textColorHint="@color/textColorHint"
+                            android:textSize="@dimen/edt_font_size" />
+
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="NAME OF THE CARD *"
+                        android:fontFamily="@font/ubuntu_light"
+                        android:textColor="@color/registerTextColor"
+                        android:textSize="@dimen/txt_font_size"
+                        android:layout_marginTop="10dp"/>
+
+                    <EditText
+                        android:id="@+id/edt_NameofCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/ic_rectangle_box_215"
+                        android:layout_marginTop="8dp"
+                        android:textSize="@dimen/edt_font_size"
+                        android:inputType="text"
+                        android:text=" "
+                        android:singleLine="true"
+                        android:fontFamily="@font/ubuntu"
+                        android:textColor="@color/registerTextColor"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Country *"
+                        android:textAllCaps="true"
+                        android:fontFamily="@font/ubuntu"
+                        android:textColor="@color/registerTextColor"
+                        android:textSize="@dimen/thirteen" />
+
+
+                    <Spinner
+                        android:id="@+id/sp_CountryListForCreditcard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/ic_spinner_bg_light"
+                        android:dropDownSelector="@drawable/down_arrow">
+                    </Spinner>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textAllCaps="true"
+                        android:text="street no &amp; name *"
+                        android:fontFamily="@font/ubuntu"
+                        android:textColor="@color/registerTextColor"
+                        android:textSize="@dimen/thirteen" />
+
+                    <EditText
+                        android:id="@+id/edt_streetNumandName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/ic_rectangle_box_215"
+                        android:inputType="text"
+                        android:padding="5dp"
+                        android:gravity="center_vertical"
+                        android:fontFamily="@font/ubuntu"
+                        android:singleLine="true"
+                        android:textColor="@color/registerTextColor"
+                        android:textSize="@dimen/edt_font_size" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/ubuntu"
+                            android:textColor="@color/registerTextColor"
+                            android:gravity="left"
+                            android:text="UNIT"
+                            android:textSize="@dimen/txt_font_size" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="17dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/ubuntu"
+                            android:textColor="@color/registerTextColor"
+                            android:gravity="left"
+                            android:text="PIN/ZIP CODE *"
+                            android:textSize="@dimen/txt_font_size" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <EditText
+                            android:id="@+id/edtxtUnitNum"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/ic_rectangle_light_215"
+                            android:fontFamily="@font/ubuntu"
+                            android:textColor="@color/registerTextColor"
+                            android:padding="5dp"
+                            android:inputType="text"
+                            android:singleLine="true"
+                            android:gravity="center_vertical"
+                            android:hint="Enter Unit"
+                            android:textSize="@dimen/edt_font_size" />
+
+                        <EditText
+                            android:id="@+id/edtPincode"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/ic_rectangle_light_215"
+                            android:fontFamily="@font/ubuntu"
+                            android:textColor="@color/registerTextColor"
+                            android:hint="Enter Code"
+                            android:padding="5dp"
+                            android:inputType="text"
+                            android:singleLine="true"
+                            android:maxLength="10"
+                            android:gravity="center_vertical"
+                            android:textSize="@dimen/edt_font_size" />
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/ubuntu"
+                        android:textColor="@color/registerTextColor"
+                        android:text="City *"
+                        android:textAllCaps="true"
+                        android:textSize="@dimen/thirteen" />
+
+                    <EditText
+                        android:id="@+id/EdtextCity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/ic_rectangle_box_215"
+                        android:layout_marginTop="8dp"
+                        android:textSize="@dimen/edt_font_size"
+                        android:singleLine="true"
+                        android:inputType="text"
+                        android:fontFamily="@font/ubuntu"
+                        android:textColor="@color/registerTextColor"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="left"
+                        android:text="STATE/PROVINCE *"
+                        android:fontFamily="@font/ubuntu"
+                        android:textColor="@color/registerTextColor"
+                        android:textSize="@dimen/txt_font_size" />
+
+                    <Spinner
+                        android:id="@+id/Spinner_State"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/ic_spinner_bg_light" />
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp"
+                    android:weightSum="10"
+                    android:layout_marginLeft="19dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <CheckBox
+                        android:id="@+id/chk_DeleteCard"
+                        android:text="DELETE THIS CARD"
+                        android:layout_width="0dp"
+                        android:layout_weight="5"
+                        android:fontFamily="@font/ubuntu_medium"
+                        android:textSize="12dp"
+                        android:layout_height="wrap_content">
+                    </CheckBox>
+                    <CheckBox
+                        android:id="@+id/chk_DefaultCard"
+                        android:text="DEFAULT CARD"
+                        android:layout_width="0dp"
+                        android:textSize="12dp"
+                        android:layout_weight="5"
+                        android:fontFamily="@font/ubuntu_medium"
+                        android:layout_marginLeft="10dp"
+                        android:layout_height="wrap_content">
+                    </CheckBox>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+        <LinearLayout
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@color/footerButtonBC"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/lblSaveCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Save &amp; Continue "
+                android:theme="@style/footertextview" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

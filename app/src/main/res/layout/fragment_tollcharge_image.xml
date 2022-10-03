@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/selected_dot"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="MissingConstraints">
+
+    <LinearLayout
+        android:id="@+id/selectedlocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="20dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/back_tollcharge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="12dp"
+                    android:src="@drawable/ic_chevron_left" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:text="Toll Charge image"
+                    android:textAllCaps="true"
+                    android:textColor="@color/TitleTextColor"
+                    android:textSize="17dp" />
+
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/selectedlocation"
+        android:layout_marginBottom="58dp"
+        android:background="@drawable/curve_box"
+        android:paddingLeft="3dp"
+        android:paddingTop="12dp"
+        android:paddingRight="3dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="6dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:fontFamily="@font/ubuntu_medium"
+                android:text="Toll Charge"
+                android:textAllCaps="true"
+                android:textColor="#707070"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/txt_PaymentStatusToll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:layout_marginRight="16dp"
+                android:fontFamily="@font/ubuntu_medium"
+                android:textAllCaps="true"
+                android:textSize="17dp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/textColorHint" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:layout_marginBottom="4dp"
+            android:layout_height="500dp">
+
+            <WebView
+                android:id="@+id/webview3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:background="@color/footerButtonBC"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/llUnpaidTollcharge"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#F5F6F7"
+                    android:orientation="horizontal"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp">
+                        <ImageView
+                            android:adjustViewBounds="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_credit_card_blue_img"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="20"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp">
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="14"
+                            android:orientation="vertical"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:id="@+id/txtCard_No1"
+                                android:layout_width="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:textColor="@color/selected_dot"
+                                android:textSize="@dimen/heading1_font_size"
+                                android:fontFamily="@font/ubuntu_medium"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:id="@+id/Card_ExDate1"
+                                android:layout_width="match_parent"
+                                android:layout_marginLeft="10dp"
+                                android:textColor="@color/selected_dot"
+                                android:textSize="@dimen/heading1_font_size"
+                                android:fontFamily="@font/ubuntu_medium"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="6"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:id="@+id/changeCreditCard"
+                                android:layout_width="match_parent"
+                                android:layout_marginLeft="10dp"
+                                android:textColor="@color/btn1"
+                                android:textSize="@dimen/heading1_font_size"
+                                android:text="Change"
+                                android:fontFamily="@font/ubuntu_medium"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="30">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_weight="21"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginLeft="10dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/ubuntu_light"
+                                android:text="Amount "
+                                android:textColor="@color/TitleTextColor"
+                                android:textSize="14dp"/>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:orientation="horizontal"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/ubuntu_medium"
+                                    android:text="USD$ "
+                                    android:textColor="@color/TitleTextColor"
+                                    android:textSize="@dimen/twenty_two"/>
+
+                                <TextView
+                                    android:id="@+id/Payment_Total1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/ubuntu_medium"
+                                    android:text=""
+                                    android:gravity="left"
+                                    android:textColor="@color/TitleTextColor"
+                                    android:textSize="@dimen/twenty_two"/>
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="4dp"
+                        android:layout_weight="9"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:gravity="right"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/Lbl_Payment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="38dp"
+                            android:background="@color/selected_dot"
+                            android:gravity="center"
+                            android:paddingBottom="10dp"
+                            android:paddingTop="10dp"
+                            android:paddingLeft="25dp"
+                            android:paddingRight="25dp"
+                            android:layout_marginRight="15dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/ubuntu_medium"
+                                android:text="PAY"
+                                android:textColor="@color/TitleTextColor"
+                                android:textSize="@dimen/appbar_padding"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llpaidTollcharge"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/ubuntu_light"
+                        android:text="Amount "
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/TitleTextColor"
+                        android:textSize="14dp"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/ubuntu_medium"
+                            android:text="USD$ "
+                            android:textColor="@color/TitleTextColor"
+                            android:textSize="@dimen/twenty_two"/>
+
+                        <TextView
+                            android:id="@+id/tollcharge_TotalAmount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/ubuntu_medium"
+                            android:text=""
+                            android:gravity="left"
+                            android:textColor="@color/TitleTextColor"
+                            android:textSize="@dimen/twenty_two"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

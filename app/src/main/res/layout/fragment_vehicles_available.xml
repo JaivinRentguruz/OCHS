@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/selected_dot"
+    xmlns:tools="http://schemas.android.com/tools">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="135dp"
+        android:id="@+id/selectlocation"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/Back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/BackImage" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SELECT VEHICLE"
+                    android:theme="@style/HeadertTitle"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/lblDiscard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntu_bold"
+                android:text="DISCARD"
+                android:textColor="@color/TitleTextColor"
+                android:textSize="14dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingRight="15dp"/>
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/lblLogout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntu_bold"
+                android:text="Logout"
+                android:textAllCaps="true"
+                android:textColor="@color/TitleTextColor"
+                android:textSize="14dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingRight="15dp"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <EditText
+                android:id="@+id/edt_searchVehicleName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="88"
+                android:gravity="center_vertical"
+                android:layout_marginRight="8dp"
+                android:layout_marginLeft="15dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp"
+                android:background="@drawable/ic_rectangle_forsearch"
+                android:textSize="@dimen/edt_font_size"
+                android:fontFamily="@font/ubuntu_light"
+                android:hint="Search"
+                android:singleLine="true"
+                android:drawablePadding="8dp"
+                android:drawableRight="@drawable/ic_timeline_search_icon"
+                android:textColorHint="@color/textColorHint"
+                android:textColor="@color/registerTextColor"
+                android:layout_gravity="center_vertical"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:id="@+id/filter_icon"
+                android:layout_height="match_parent"
+                android:layout_weight="12"
+                android:layout_marginRight="15dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:background="@drawable/curved_box_bg">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/filter_icon"
+                        android:adjustViewBounds="true"
+                        android:layout_centerInParent="true"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/selectlocation"
+        android:paddingTop="9dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:background="@drawable/curve_box">
+             <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/ubuntu"
+                    android:text="VEHICLE AVAILABLE"
+                    android:textColor="@color/selected_dot"
+                    android:textSize="17dp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/textColorHint"/>
+                 <RelativeLayout
+                     android:id="@+id/relative_vehicle_available"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent">
+                 </RelativeLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

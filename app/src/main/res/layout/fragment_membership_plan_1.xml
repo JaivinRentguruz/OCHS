@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/selected_dot"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/selectedlocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/back_to_Profile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/BackImage" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Membership plan"
+                        android:theme="@style/HeadertTitle"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:fontFamily="@font/ubuntu_medium"
+                        android:text="PLANS"
+                        android:paddingRight="15dp"
+                        android:gravity="right"
+                        android:textAllCaps="true"
+                        android:textColor="@color/TitleTextColor"
+                        android:textSize="17dp" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="48dp"
+            android:layout_below="@id/selectedlocation"
+            android:background="#F2F2F2">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:background="@color/selected_dot"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:id="@+id/GoldPlan"
+                        android:background="@drawable/curve_box_for_goldplan"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_weight="20"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="7dp"
+                            android:layout_marginBottom="8dp"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="3"
+                                android:gravity="center"
+                                android:layout_height="match_parent">
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:src="@drawable/coin_icon"
+                                    android:layout_height="wrap_content"/>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="17"
+                                android:orientation="vertical"
+                                android:layout_height="match_parent">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Gold Plan"
+                                    android:fontFamily="@font/ubuntu_medium"
+                                    android:textSize="@dimen/twenty_two"
+                                    android:textColor="@color/TitleTextColor"/>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:orientation="horizontal"
+                                    android:layout_marginTop="3dp"
+                                    android:layout_height="match_parent">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Start:"
+                                        android:fontFamily="@font/ubuntu_medium"
+                                        android:textSize="@dimen/txt_font_size"
+                                        android:textColor="@color/selected_dot"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="01/01/2020"
+                                        android:fontFamily="@font/ubuntu_medium"
+                                        android:textSize="@dimen/txt_font_size"
+                                        android:textColor="@color/selected_dot"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text=" I  "
+                                        android:fontFamily="@font/ubuntu_medium"
+                                        android:textSize="@dimen/txt_font_size"
+                                        android:textColor="@color/selected_dot"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="End Date:"
+                                        android:fontFamily="@font/ubuntu_medium"
+                                        android:textSize="@dimen/txt_font_size"
+                                        android:textColor="@color/selected_dot"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text=" 31/12/2020"
+                                        android:fontFamily="@font/ubuntu_medium"
+                                        android:textSize="@dimen/txt_font_size"
+                                        android:textColor="@color/selected_dot"/>
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:background="@color/screen_bg_color"
+                            android:layout_height="1dp">
+                        </View>
+                        <LinearLayout
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="33dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:textSize="12dp"
+                                android:inputType="textMultiLine"
+                                android:textColor="@color/TitleTextColor"
+                                android:fontFamily="@font/ubuntu_light"
+                                android:text="@string/membershipplandesc"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:background="#D8BA6B"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:background="@drawable/curve_box_for_bronzplan"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_weight="20"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="7dp"
+                            android:layout_marginBottom="8dp"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="3"
+                                android:gravity="center"
+                                android:layout_height="match_parent">
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:src="@drawable/bronze_icon"
+                                    android:layout_height="wrap_content"/>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="17"
+                                android:orientation="vertical"
+                                android:layout_height="match_parent">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Bronze Plan"
+                                    android:fontFamily="@font/ubuntu_medium"
+                                    android:textSize="@dimen/twenty_two"
+                                    android:textColor="@color/TitleTextColor"/>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:orientation="horizontal"
+                                    android:layout_marginTop="3dp"
+                                    android:layout_height="match_parent">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Start:"
+                                        android:fontFamily="@font/ubuntu_medium"
+                                        android:textSize="@dimen/txt_font_size"
+                                        android:textColor="@color/selected_dot"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="01/01/2020"
+                                        android:fontFamily="@font/ubuntu_medium"
+                                        android:textSize="@dimen/txt_font_size"
+                                        android:textColor="@color/selected_dot"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text=" I  "
+                                        android:fontFamily="@font/ubuntu_medium"
+                                        android:textSize="@dimen/txt_font_size"
+                                        android:textColor="@color/selected_dot"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="End Date:"
+                                        android:fontFamily="@font/ubuntu_medium"
+                                        android:textSize="@dimen/txt_font_size"
+                                        android:textColor="@color/selected_dot"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text=" 31/12/2020"
+                                        android:fontFamily="@font/ubuntu_medium"
+                                        android:textSize="@dimen/txt_font_size"
+                                        android:textColor="@color/selected_dot"/>
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:background="@color/screen_bg_color"
+                            android:layout_height="1dp">
+                        </View>
+                        <LinearLayout
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="33dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:textSize="12dp"
+                                android:textColor="@color/TitleTextColor"
+                                android:inputType="textMultiLine"
+                                android:fontFamily="@font/ubuntu_light"
+                                android:text="@string/membershipplandesc"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:background="#F2CEA8"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:background="@drawable/curve_box_for_silverplan"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_weight="20"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="7dp"
+                            android:layout_marginBottom="8dp"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="3"
+                                android:gravity="center"
+                                android:layout_height="match_parent">
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:src="@drawable/silver_icon"
+                                    android:layout_height="wrap_content"/>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="17"
+                                android:orientation="vertical"
+                                android:layout_height="match_parent">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Silver Plan"
+                                    android:fontFamily="@font/ubuntu_medium"
+                                    android:textSize="@dimen/twenty_two"
+                                    android:textColor="@color/TitleTextColor"/>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:orientation="horizontal"
+                                    android:layout_marginTop="3dp"
+                                    android:layout_height="match_parent">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Start:"
+                                        android:fontFamily="@font/ubuntu_medium"
+                                        android:textSize="@dimen/txt_font_size"
+                                        android:textColor="@color/selected_dot"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="01/01/2020"
+                                        android:fontFamily="@font/ubuntu_medium"
+                                        android:textSize="@dimen/txt_font_size"
+                                        android:textColor="@color/selected_dot"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text=" I  "
+                                        android:fontFamily="@font/ubuntu_medium"
+                                        android:textSize="@dimen/txt_font_size"
+                                        android:textColor="@color/selected_dot"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="End Date:"
+                                        android:fontFamily="@font/ubuntu_medium"
+                                        android:textSize="@dimen/txt_font_size"
+                                        android:textColor="@color/selected_dot"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text=" 31/12/2020"
+                                        android:fontFamily="@font/ubuntu_medium"
+                                        android:textSize="@dimen/txt_font_size"
+                                        android:textColor="@color/selected_dot"/>
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:background="@color/screen_bg_color"
+                            android:layout_height="1dp">
+                        </View>
+                        <LinearLayout
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="33dp"
+                            android:layout_width="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_height="match_parent">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:textColor="@color/TitleTextColor"
+                                android:textSize="12dp"
+                                android:inputType="textMultiLine"
+                                android:fontFamily="@font/ubuntu_light"
+                                android:text="@string/membershipplandesc"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:background="#C2C2C2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:background="@drawable/curve_box_for_green_bg"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_weight="20"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="7dp"
+                            android:layout_marginBottom="8dp"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="3"
+                                android:gravity="center"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/dollar_icon" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="17"
+                                android:orientation="vertical"
+                                android:layout_height="match_parent">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Pay As You Go Plan"
+                                    android:fontFamily="@font/ubuntu_medium"
+                                    android:textSize="@dimen/twenty_two"
+                                    android:textColor="@color/TitleTextColor"/>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:orientation="horizontal"
+                                    android:layout_marginTop="3dp"
+                                    android:layout_height="match_parent">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Start:"
+                                        android:fontFamily="@font/ubuntu_medium"
+                                        android:textSize="@dimen/txt_font_size"
+                                        android:textColor="@color/selected_dot"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="01/01/2020"
+                                        android:fontFamily="@font/ubuntu_medium"
+                                        android:textSize="@dimen/txt_font_size"
+                                        android:textColor="@color/selected_dot"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text=" I  "
+                                        android:fontFamily="@font/ubuntu_medium"
+                                        android:textSize="@dimen/txt_font_size"
+                                        android:textColor="@color/selected_dot"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="End Date:"
+                                        android:fontFamily="@font/ubuntu_medium"
+                                        android:textSize="@dimen/txt_font_size"
+                                        android:textColor="@color/selected_dot"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text=" 31/12/2020"
+                                        android:fontFamily="@font/ubuntu_medium"
+                                        android:textSize="@dimen/txt_font_size"
+                                        android:textColor="@color/selected_dot"/>
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:background="@color/screen_bg_color"
+                            android:layout_height="1dp">
+                        </View>
+                        <LinearLayout
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="40dp"
+                            android:layout_width="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_height="match_parent">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:textColor="@color/TitleTextColor"
+                                android:textSize="12dp"
+                                android:inputType="textMultiLine"
+                                android:fontFamily="@font/ubuntu_light"
+                                android:text="@string/membershipplandesc"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+        <LinearLayout
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/footerButtonBC"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_gravity="center"
+                android:paddingTop="10dp"
+                android:paddingBottom="14dp"
+                android:textSize="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save"
+                android:fontFamily="@font/ubuntu_medium"
+                android:textAllCaps="true"
+                android:textColor="@color/TitleTextColor"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/selected_dot"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="20dp"
+            android:id="@+id/selectlocation"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/Back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/BackImage" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="VEHICLE OPTIONS "
+                        android:theme="@style/HeadertTitle"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txt_discardVehFilter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DISCARD"
+                    android:theme="@style/textDiscard"
+                    android:gravity="right"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/selectlocation"
+            android:paddingTop="12dp"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:background="@drawable/curve_box">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/ubuntu"
+                        android:layout_marginLeft="10dp"
+                        android:text="OPTIONS AVAILABLE"
+                        android:textColor="@color/selected_dot"
+                        android:textSize="17dp" />
+
+                    <TextView
+                        android:id="@+id/txtFilterApply"
+                        android:layout_width="match_parent"
+                        android:gravity="right"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/ubuntu"
+                        android:text="Apply"
+                        android:textAllCaps="true"
+                        android:layout_marginRight="10dp"
+                        android:textColor="@color/selected_dot"
+                        android:textSize="17dp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/textColorHint"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:weightSum="5"
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="6dp"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="2"
+                                android:text="Transmission"
+                                android:layout_gravity="center_vertical"
+                                android:paddingLeft="20dp"
+                                android:fontFamily="@font/ubuntu"
+                                android:gravity="left"
+                                android:textSize="@dimen/heading1_font_size"
+                                android:textColor="@color/textColorHint"
+                                android:layout_height="wrap_content"/>
+
+                            <Spinner
+                                android:id="@+id/spinnerTransmission"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3"
+                                android:background="@drawable/ic_spinner_light"
+                                android:dropDownSelector="@drawable/down_arrow" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:weightSum="5"
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="6dp"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="2"
+                                android:text="Passengers"
+                                android:layout_gravity="center_vertical"
+                                android:paddingLeft="20dp"
+                                android:fontFamily="@font/ubuntu"
+                                android:gravity="left"
+                                android:textSize="@dimen/heading1_font_size"
+                                android:textColor="@color/textColorHint"
+                                android:layout_height="wrap_content"/>
+
+                            <Spinner
+                                android:layout_width="0dp"
+                                android:layout_weight="3"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/spinnerPassenger"
+                                android:background="@drawable/ic_spinner_light"
+                                android:dropDownSelector="@drawable/down_arrow"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:background="@drawable/gray_top_curve"
+                        android:layout_height="43dp">
+                        <TextView
+                            android:padding="9dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_width="wrap_content"
+                            android:textColor="@color/selected_dot"
+                            android:fontFamily="@font/ubuntu_medium"
+                            android:text="Sort by"
+                            android:textSize="@dimen/textsize_eighteen"
+                            android:layout_height="match_parent">
+                        </TextView>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:padding="6dp"
+                        android:background="@drawable/gray_bottom_curve"
+                        android:layout_height="match_parent">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:weightSum="12"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_height="match_parent">
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="6"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                                <CheckBox
+                                    android:id="@+id/checkbox1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:buttonTint="@color/TitleTextColor"
+                                    android:textSize="@dimen/eleven"
+                                    android:text="Price High to Low"
+                                    android:textColor="@color/registerTextColor"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="6"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                                <CheckBox
+                                    android:id="@+id/checkbox2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:buttonTint="@color/TitleTextColor"
+                                    android:textSize="@dimen/eleven"
+                                    android:text="Price Low to High"
+                                    android:textColor="@color/registerTextColor"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:background="@drawable/gray_top_curve"
+                        android:layout_height="43dp">
+                        <TextView
+                            android:padding="9dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_width="wrap_content"
+                            android:textColor="@color/selected_dot"
+                            android:fontFamily="@font/ubuntu_medium"
+                            android:text="Vehicle Type "
+                            android:textSize="@dimen/textsize_eighteen"
+                            android:layout_height="match_parent">
+                        </TextView>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:padding="4dp"
+                        android:background="@drawable/gray_bottom_curve"
+                        android:layout_height="match_parent">
+                       <RelativeLayout
+                           android:id="@+id/rl_vehicle_type"
+                           android:layout_width="match_parent"
+                           android:layout_height="match_parent">
+                       </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="43dp"
+                        android:background="@drawable/gray_top_curve"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:fontFamily="@font/ubuntu_medium"
+                            android:padding="9dp"
+                            android:text="Vehicle Features"
+                            android:textColor="@color/selected_dot"
+                            android:textSize="@dimen/textsize_eighteen" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:padding="4dp"
+                        android:background="@drawable/gray_bottom_curve"
+                        android:layout_height="match_parent">
+                        <RelativeLayout
+                            android:id="@+id/rl_vehicle_features"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

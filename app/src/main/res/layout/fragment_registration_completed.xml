@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/imglayout"
+            android:layout_marginTop="90dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/explore_icon">
+                </ImageView>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_below="@+id/imglayout"
+            android:id="@+id/txtlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:text="Registration Completed!"
+                android:textSize="@dimen/registercompleted_fontsize"
+                android:fontFamily="@font/ubuntu_medium"
+                android:textColor="@color/header1_color"/>
+
+            <LinearLayout
+                android:layout_below="@+id/imglayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="25dp"
+                android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:text="You will be notified as soon as your account is\n approved and insurance policy processed."
+                android:textSize="@dimen/heading1_font_size"
+                android:fontFamily="@font/ubuntu_light"
+                android:textColor="@color/textColorHint"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:text="Seat back and relax!\nExplore the car collection and prices."
+                android:textSize="@dimen/heading1_font_size"
+                android:fontFamily="@font/ubuntu_light"
+                android:textColor="@color/textColorHint"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lblexplore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="45dp"
+            android:layout_marginTop="45dp"
+            android:layout_below="@+id/txtlayout"
+            android:background="@drawable/ic_rectangle_blackbox"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtexplore"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:textSize="16dp"
+                android:fontFamily="@font/ubuntu_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="EXPLORE"
+                android:textColor="@color/TitleTextColor"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/sucessfull_regi"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/successful_bg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:paddingBottom="80dp"
+            android:background="@drawable/curve_box"
+            android:paddingTop="30dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/map_icon">
+                    </ImageView>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:text="Allow Flexiicar to Access Your Location to be\n able to find best car deals in your area."
+                android:textSize="@dimen/heading1_font_size"
+                android:fontFamily="@font/ubuntu_light"
+                android:textColor="@color/textColorHint"/>
+
+            <LinearLayout
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="50dp"
+                android:weightSum="2"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/layoutNotNow"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtlayout"
+                    android:background="@color/footerButtonBC"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtnotnow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="25dp"
+                        android:fontFamily="@font/ubuntu_medium"
+                        android:text="NOT NOW"
+                        android:textColor="@color/screen_bg_color"
+                        android:textSize="16dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/AllowAccess"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtlayout"
+                    android:background="@drawable/ic_rectangle_blackbox"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txte"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="25dp"
+                        android:fontFamily="@font/ubuntu_medium"
+                        android:text="ALLOW ACCESS"
+                        android:textColor="@color/screen_bg_color"
+                        android:textSize="16dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

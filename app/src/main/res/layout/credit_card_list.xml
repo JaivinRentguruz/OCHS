@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/creditcard_layout"
+        android:orientation="vertical"
+        android:layout_margin="15dp"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:background="@drawable/creditcardbg"
+        android:gravity="bottom">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp"
+        android:gravity="right"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/lbl_CardNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/screen_bg_color"
+            android:textSize="26dp"
+            android:fontFamily="@font/ubuntu_medium"
+            android:text="**** **** **** 8967"/>
+        <TextView
+            android:id="@+id/lbl_CardUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="12dp"
+            android:layout_marginRight="5dp"
+            android:textColor="@color/screen_bg_color"
+            android:fontFamily="@font/ubuntu_medium"
+            android:text="Edit Card"/>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp"
+        android:weightSum="10"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/lbl_CardName"
+            android:layout_width="0dp"
+            android:layout_weight="7"
+            android:layout_marginLeft="15dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/selected_dot"
+            android:textSize="23dp"
+            android:fontFamily="@font/ubuntu_medium"
+            android:text="Neeraj Kaneria"/>
+        <TextView
+            android:id="@+id/lbl_CardExDate"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_marginRight="10dp"
+            android:gravity="right"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubuntu_medium"
+            android:textSize="23dp"
+            android:textColor="@color/screen_bg_color"
+            android:text="10/22"/>
+    </LinearLayout>
+</LinearLayout>
+</LinearLayout>
+
+

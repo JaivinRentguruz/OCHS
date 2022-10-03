@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/selected_dot"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/llWelcomeNote"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="0dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="70dp"
+                android:fontFamily="@font/ubuntu_medium"
+                android:text="Welcome Back"
+                android:textColor="@color/TitleTextColor"
+                android:textSize="28dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/ubuntu_light"
+                android:gravity="bottom"
+                android:text="Please login to your account"
+                android:textColor="@color/TitleTextColor"
+                android:textSize="16dp" />
+
+        </LinearLayout>
+
+        <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="48dp"
+        android:layout_below="@id/llWelcomeNote"
+        android:background="@drawable/curve_box">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="0dp"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/logo_version1" />
+
+                </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="gravity"
+                android:layout_marginLeft="23dp"
+                android:layout_marginTop="30dp"
+                android:gravity="left"
+                android:text="USERNAME"
+                android:textColor="@color/textColorHint"
+                android:fontFamily="@font/ubuntu_light"
+                android:textSize="@dimen/txt_font_size" />
+
+            <EditText
+                android:id="@+id/Edt_Username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:drawableRight="@drawable/ic_actions_user"
+                android:fontFamily="@font/ubuntu_medium"
+                android:inputType="text"
+                android:textColor="@color/registerTextColor"
+                android:paddingTop="8dp"
+                android:paddingBottom="15dp"
+                android:textAlignment="textStart"
+                android:text="neeraj@rentguruz.com"
+                android:textSize="@dimen/edt_font_size" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="gravity"
+                android:layout_marginLeft="23dp"
+                android:layout_marginTop="30dp"
+                android:gravity="left"
+                android:text="PASSWORD"
+                android:textColor="@color/textColorHint"
+                android:fontFamily="@font/ubuntu_light"
+                android:textSize="@dimen/txt_font_size" />
+
+            <EditText
+                android:id="@+id/Edt_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="15dp"
+                android:textSize="@dimen/edt_font_size"
+                android:inputType="textPassword"
+                android:textColor="@color/registerTextColor"
+                android:textAlignment="textStart"
+                android:text="Guest@123"
+                android:fontFamily="@font/ubuntu_medium"
+                android:drawableRight="@drawable/ic_security_locked"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="2"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="30dp"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/checkbSavePass"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="14dp"
+                        android:layout_gravity="left"
+                        android:fontFamily="@font/ubuntu"
+                        android:text="Save Password">
+                    </CheckBox>
+                </LinearLayout>
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/lbl_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/footerButtonBC"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="14dp"
+                    android:textSize="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LOGIN"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:textColor="@color/TitleTextColor"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

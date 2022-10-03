@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_margin="4dp"
+    android:orientation="horizontal"
+    android:weightSum="15">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="3dp"
+        android:layout_weight="5"
+        android:background="@drawable/light_gray_box"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:src="@drawable/ic_insurance_icon"/>
+
+        <TextView
+            android:id="@+id/lbl_InsurancePro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubuntu_light"
+            android:padding="3dp"
+            android:text="Insurance\nProtection"
+            android:textColor="@color/registerTextColor"
+            android:textSize="@dimen/textsize_ten"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="3dp"
+        android:layout_weight="5"
+        android:background="@drawable/light_gray_box"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:src="@drawable/ic_maintanance_icon"/>
+
+        <TextView
+            android:id="@+id/lbl_carMaintanance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubuntu_light"
+            android:padding="3dp"
+            android:text="Car \nMaintainance"
+            android:textColor="@color/registerTextColor"
+            android:textSize="@dimen/textsize_ten"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="3dp"
+        android:layout_weight="5"
+        android:background="@drawable/light_gray_box"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:src="@drawable/ic_road_side_icon"/>
+
+        <TextView
+            android:id="@+id/lbl_roadsideAssistance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubuntu_light"
+            android:text="24X7 Road\nSide Assistance"
+            android:textColor="@color/registerTextColor"
+            android:textSize="@dimen/textsize_ten"/>
+    </LinearLayout>
+
+</LinearLayout>

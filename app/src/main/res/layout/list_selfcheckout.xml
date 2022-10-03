@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        android:layout_height="wrap_content">
+
+        <CheckBox
+            android:id="@+id/chk_green"
+            android:layout_marginLeft="5dp"
+            android:button="@drawable/sharp_checkbox_drawable"
+            android:buttonTint="@color/footerButtonBC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </CheckBox>
+
+        <CheckBox
+            android:id="@+id/chk_yellow"
+            android:layout_marginLeft="5dp"
+            android:button="@drawable/sharp_checkbox_drawable"
+            android:buttonTint="@color/btn1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </CheckBox>
+
+        <CheckBox
+            android:id="@+id/chk_red"
+            android:layout_marginLeft="5dp"
+            android:button="@drawable/sharp_checkbox_drawable"
+            android:buttonTint="@color/btn_bg_color_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </CheckBox>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="2dp"
+        android:layout_gravity="center_vertical"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/txt_chkOptionName"
+            android:layout_width="match_parent"
+            android:text=" "
+            android:textSize="12dp"
+            android:fontFamily="@font/ubuntu_light"
+            android:textColor="@color/selected_dot"
+            android:layout_height="match_parent">
+        </TextView>
+    </LinearLayout>
+</LinearLayout>

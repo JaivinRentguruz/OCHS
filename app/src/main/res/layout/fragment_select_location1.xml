@@ -1,0 +1,934 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/selected_dot"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <LinearLayout
+            android:id="@+id/toolbar1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="40dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/backbtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/BackImage"  />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Select location"
+                        android:theme="@style/HeadertTitle"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txt_DiscardSelectLoc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DISCARD"
+                    android:theme="@style/textDiscard"
+                    android:gravity="right"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_below="@+id/toolbar1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="60dp">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="155dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/curve_box_white_2">
+                    <ImageView
+                        android:id="@+id/Veh_image_bg"
+                        android:layout_width="wrap_content"
+                        android:layout_margin="7dp"
+                        android:padding="10dp"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:orientation="horizontal"
+                        android:layout_centerHorizontal="true"/>
+                </RelativeLayout>
+                <LinearLayout
+                    android:background="@drawable/curve_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal"
+                        android:visibility="visible"
+                        android:weightSum="10">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="8"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txt_vahTypeName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:fontFamily="@font/ubuntu_medium"
+                                android:text="ECONOMY CAR"
+                                android:textColor="@color/footerButtonBC"
+                                android:textSize="@dimen/edt_font_size"/>
+
+                            <TextView
+                                android:id="@+id/txt_VehicleName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="12dp"
+                                android:fontFamily="@font/ubuntu_medium"
+                                android:text="MITSUBISHI MIRAGE"
+                                android:textColor="@color/selected_dot"
+                                android:textSize="@dimen/textsize_eighteen"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:layout_marginTop="7dp"
+                            android:layout_marginRight="1dp"
+                            android:layout_weight="2"
+                            android:visibility="invisible"
+                            android:gravity="right">
+
+                            <LinearLayout
+                                android:layout_width="60dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="10dp"
+                                android:background="@drawable/black_img_bc"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/ic_star_icon"/>
+
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:padding="4dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+                                    <TextView
+                                        android:id="@+id/txt_rate"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/ubuntu_medium"
+                                        android:text="4"
+                                        android:textColor="@color/TitleTextColor"
+                                        android:textSize="@dimen/edt_font_size"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/ubuntu_medium"
+                                        android:text=".0"
+                                        android:textColor="@color/TitleTextColor"
+                                        android:textSize="@dimen/edt_font_size"/>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="4dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#F2F3F4"
+                        android:visibility="visible">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:weightSum="100">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="8"
+                                android:layout_marginTop="1dp"
+                                android:gravity="center_horizontal"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="4dp"
+                                    android:layout_marginBottom="3dp"
+                                    android:src="@drawable/ic_pickup_location_circle"/>
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_marginTop="3dp"
+                                    android:layout_marginBottom="3dp"
+                                    android:background="@color/black"
+                                    android:layout_height="26dp"/>
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/ic_return_location_circle"/>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="68">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical">
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/ubuntu_medium"
+                                        android:text="Pickup"
+                                        android:textColor="@color/selected_dot"
+                                        android:textSize="@dimen/heading1_font_size"/>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:id="@+id/pickuplocName"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginRight="7dp"
+                                            android:fontFamily="@font/ubuntu"
+                                            android:text=""
+                                            android:textColor="@color/background"
+                                            android:textSize="@dimen/txt_font_size"/>
+
+                                        <TextView
+                                            android:id="@+id/txt_PickupDate"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginRight="7dp"
+                                            android:fontFamily="@font/ubuntu_light"
+                                            android:text=""
+                                            android:textColor="@color/textColorHint"
+                                            android:textSize="@dimen/txt_font_size"/>
+
+                                        <LinearLayout
+                                            android:orientation="horizontal"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content">
+                                            <TextView
+                                                android:id="@+id/txt_PickupTime"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:fontFamily="@font/ubuntu_light"
+                                                android:text=""
+                                                android:textColor="@color/textColorHint"
+                                                android:textSize="@dimen/txt_font_size"/>
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:orientation="vertical"
+                                        android:layout_marginTop="10dp"
+                                        android:paddingBottom="4dp"
+                                        android:layout_height="wrap_content">
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/ubuntu_medium"
+                                        android:text="Return"
+                                        android:textColor="@color/selected_dot"
+                                        android:textSize="@dimen/heading1_font_size"/>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:id="@+id/returnLocName"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginRight="7dp"
+                                            android:text=""
+                                            android:fontFamily="@font/ubuntu"
+                                            android:textColor="@color/background"
+                                            android:textSize="@dimen/txt_font_size"/>
+
+                                        <TextView
+                                            android:id="@+id/txt_ReturnDate"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginRight="7dp"
+                                            android:fontFamily="@font/ubuntu_light"
+                                            android:text=""
+                                            android:textColor="@color/textColorHint"
+                                            android:textSize="@dimen/txt_font_size"/>
+                                        <LinearLayout
+                                            android:orientation="horizontal"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content">
+                                            <TextView
+                                                android:id="@+id/txt_ReturnTime"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent"
+                                                android:fontFamily="@font/ubuntu_light"
+                                                android:text=""
+                                                android:textColor="@color/textColorHint"
+                                                android:textSize="@dimen/txt_font_size" />
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="24">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="3dp"
+                                    android:background="@color/btn1"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:fontFamily="@font/ubuntu_medium"
+                                        android:gravity="center"
+                                        android:text="Total Days"
+                                        android:textColor="@color/TitleTextColor"
+                                        android:textSize="@dimen/heading1_font_size"/>
+
+                                    <TextView
+                                        android:id="@+id/txt_TotalDays"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="right"
+                                        android:layout_marginRight="7dp"
+                                        android:fontFamily="@font/ubuntu_medium"
+                                        android:gravity="right"
+                                        android:text=""
+                                        android:layout_marginTop="5dp"
+                                        android:textColor="@color/TitleTextColor"
+                                        android:textSize="30dp"/>
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginBottom="7dp"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/txtvehDesc"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="2dp"
+                            android:fontFamily="@font/ubuntu_light"
+                            android:text=""
+                            android:textColor="#242A37"
+                            android:textSize="@dimen/edt_font_size"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:fontFamily="@font/ubuntu_medium"
+                            android:text="SPECIFICATION"
+                            android:textColor="@color/selected_dot"
+                            android:textSize="@dimen/edt_font_size"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="90dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:orientation="horizontal"
+                            android:weightSum="20">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp"
+                                android:layout_weight="5"
+                                android:background="@drawable/light_gray_box"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="18dp"
+                                    android:layout_height="18dp"
+                                    android:layout_gravity="left"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="12dp"
+                                    android:src="@drawable/ic_car_seat_img"/>
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="15dp"
+                                    android:gravity="left"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <TextView
+                                        android:id="@+id/txt_Seats"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text=" "
+                                        android:fontFamily="@font/ubuntu_light"
+                                        android:textColor="@color/registerTextColor"
+                                        android:layout_margin="1dp"
+                                        android:textSize="@dimen/edt_font_size"/>
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp"
+                                android:layout_weight="5"
+                                android:background="@drawable/light_gray_box"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="18dp"
+                                    android:layout_height="18dp"
+                                    android:layout_gravity="left"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="12dp"
+                                    android:src="@drawable/ic_bag"/>
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="15dp"
+                                    android:gravity="left"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:id="@+id/txt_Bags"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="1dp"
+                                        android:fontFamily="@font/ubuntu_light"
+                                        android:text=" "
+                                        android:textColor="@color/registerTextColor"
+                                        android:textSize="@dimen/edt_font_size" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp"
+                                android:layout_weight="5"
+                                android:background="@drawable/light_gray_box"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="18dp"
+                                    android:layout_height="18dp"
+                                    android:layout_gravity="left"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="12dp"
+                                    android:src="@drawable/ic_gear_1"/>
+
+                                <TextView
+                                    android:id="@+id/txt_Automatic"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="15dp"
+                                    android:gravity="center"
+                                    android:fontFamily="@font/ubuntu_light"
+                                    android:textColor="@color/registerTextColor"
+                                    android:text=""
+                                    android:textSize="@dimen/edt_font_size"/>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp"
+                                android:layout_weight="5"
+                                android:background="@drawable/light_gray_box"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="18dp"
+                                    android:layout_height="18dp"
+                                    android:layout_gravity="left"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="12dp"
+                                    android:src="@drawable/ic_car_door"/>
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="15dp"
+                                    android:gravity="left"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <TextView
+                                        android:id="@+id/txt_Doors"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text=" "
+                                        android:fontFamily="@font/ubuntu_light"
+                                        android:textColor="@color/registerTextColor"
+                                        android:layout_margin="1dp"
+                                        android:textSize="@dimen/edt_font_size"/>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:visibility="visible">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginBottom="6dp"
+                                android:fontFamily="@font/ubuntu_medium"
+                                android:padding="2dp"
+                                android:text="INCLUDE"
+                                android:textColor="@color/selected_dot"
+                                android:textSize="@dimen/edt_font_size"/>
+                            <RelativeLayout
+                                android:id="@+id/rl_includeDetails"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="3dp"
+                        android:background="@color/textColorHint" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal"
+                        android:padding="5dp"
+                        android:weightSum="15">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="left"
+                            android:layout_weight="14"
+                            android:fontFamily="@font/ubuntu_medium"
+                            android:gravity="left"
+                            android:text="Summary of charges"
+                            android:textAllCaps="true"
+                            android:textColor="@color/selected_dot"/>
+
+                        <ImageView
+                            android:id="@+id/ArrowSummaryofCharges"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="right"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:src="@drawable/ic_arrow_icon"/>
+
+                        <ImageView
+                            android:id="@+id/ArrowSummaryofChargesDown"
+                            android:visibility="gone"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="right"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:layout_marginRight="3dp"
+                            android:src="@drawable/ic_down_arrow"/>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="3dp"
+                        android:background="@color/textColorHint" />
+                    <RelativeLayout
+                        android:visibility="gone"
+                        android:id="@+id/rl_tax_details"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="7dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:weightSum="15">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="left"
+                                android:layout_marginLeft="15dp"
+                                android:layout_weight="5"
+                                android:fontFamily="@font/ubuntu_medium"
+                                android:gravity="left"
+                                android:text="DEPOSITE"
+                                android:textColor="@color/selected_dot"
+
+                                android:textSize="@dimen/edt_font_size"/>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="15dp"
+                                android:layout_weight="10"
+                                android:gravity="right"
+                                android:fontFamily="@font/ubuntu_medium"
+                                android:text="USD 500.00 / REFUNDABLE"
+                                android:textColor="@color/onBoardingScreen3bg"
+                                android:textSize="@dimen/fab_margin"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:padding="3dp"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="right"
+                                android:layout_marginLeft="75dp"
+                                android:layout_marginRight="15dp"
+                                android:fontFamily="@font/ubuntu_medium"
+                                android:gravity="right"
+                                android:text="*A one time security deposit required to cover\nthe cost of any additional fees incur upon return."
+                                android:textSize="@dimen/textsize_ten"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="#F6F6F6"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="75dp"
+                            android:weightSum="16">
+
+                            <LinearLayout
+                                android:id="@+id/green_layout"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="14dp"
+                                android:layout_marginTop="7dp"
+                                android:layout_marginRight="7dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_weight="8"
+                                android:background="@drawable/ic_rectangle_yellow_green"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="25dp">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="12dp"
+                                        android:layout_marginTop="5dp"
+                                        android:text="Pay Now"
+                                        android:textColor="@color/TitleTextColor"
+                                        android:textSize="13dp"/>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:orientation="horizontal"
+                                    android:layout_marginRight="15dp"
+                                    android:gravity="right"
+                                    android:layout_gravity="right"
+                                    android:layout_height="25dp">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="USD$ "
+                                        android:textColor="@color/TitleTextColor"
+                                        android:textSize="20dp"/>
+                                    <TextView
+                                        android:id="@+id/txt_paymentNow"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text=" "
+                                        android:textColor="@color/TitleTextColor"
+                                        android:textSize="20dp"/>
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/black_layout"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="7dp"
+                                android:layout_marginTop="7dp"
+                                android:layout_marginRight="14dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_weight="8"
+                                android:background="@drawable/ic_rectangle_blackbox"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="25dp">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="12dp"
+                                        android:layout_marginTop="5dp"
+                                        android:text="Pay Later"
+                                        android:textColor="@color/TitleTextColor"
+                                        android:textSize="13dp"/>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:orientation="horizontal"
+                                    android:layout_marginRight="15dp"
+                                    android:gravity="right"
+                                    android:layout_gravity="right"
+                                    android:layout_height="25dp">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="USD$ "
+                                        android:textColor="@color/TitleTextColor"
+                                        android:textSize="20dp"/>
+                                    <TextView
+                                        android:id="@+id/txt_PaymentLater"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="  "
+                                        android:textColor="@color/TitleTextColor"
+                                        android:textSize="20dp"/>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="12dp"
+                            android:fontFamily="@font/ubuntu_light"
+                            android:text="* Subject to term &amp; Condition of the Contract to be signed\nbetween Driver and Dealership providing Lease."
+                            android:textSize="@dimen/txt_font_size"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <LinearLayout
+            android:background="@color/selected_dot"
+            android:id="@+id/process"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:weightSum="100"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="40"
+                android:layout_marginLeft="15dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Amount"
+                    android:fontFamily="@font/ubuntu_light"
+                    android:textSize="@dimen/edt_font_size"
+                    android:textColor="@color/textColorHint"
+                    android:layout_height="wrap_content"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="$ "
+                        android:textColor="@color/TitleTextColor"
+                        android:textSize="@dimen/twenty_two"
+                        android:fontFamily="@font/ubuntu_medium"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/txt_TotalChargeAmount"
+                        android:layout_width="wrap_content"
+                        android:text=" "
+                        android:textColor="@color/TitleTextColor"
+                        android:textSize="@dimen/twenty_two"
+                        android:fontFamily="@font/ubuntu_medium"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="30"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Mileage"
+                    android:fontFamily="@font/ubuntu_light"
+                    android:textSize="@dimen/edt_font_size"
+                    android:textColor="@color/textColorHint"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text=""
+                    android:textColor="@color/TitleTextColor"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:textSize="@dimen/twenty_two"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="30"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginRight="15dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:id="@+id/lbl_confirm"
+                    android:layout_width="100dp"
+                    android:background="@drawable/curved_box_bg"
+                    android:gravity="center"
+                    android:layout_height="35dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/ubuntu_medium"
+                        android:text="Book Now"
+                        android:textAllCaps="true"
+                        android:textColor="@color/TitleTextColor"
+                        android:textSize="@dimen/appbar_padding" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

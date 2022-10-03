@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+<LinearLayout
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:gravity="center_vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:weightSum="15">
+    <RelativeLayout
+        android:id="@+id/rl_imageview"
+        android:layout_width="0dp"
+        android:layout_weight="0"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_marginTop="4dp"
+            android:src="@drawable/ic_circle_green"
+            android:layout_height="wrap_content">
+        </ImageView>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txt_miscName"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="8"
+        android:fontFamily="@font/ubuntu_light"
+        android:gravity="center_vertical"
+        android:text="Infant Car Seat"
+        android:textColor="@color/selected_dot"
+        android:textSize="16dp" />
+    <LinearLayout
+        android:layout_width="0dp"
+        android:orientation="horizontal"
+        android:gravity="right"
+        android:layout_marginRight="6dp"
+        android:layout_height="match_parent"
+        android:layout_weight="5">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/ubuntu_light"
+            android:text="USD$ "
+            android:gravity="center_vertical"
+            android:textColor="@color/selected_dot"
+            android:textSize="16dp"/>
+        <TextView
+            android:id="@+id/txt_miscAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/ubuntu_light"
+            android:text="36.00"
+            android:gravity="center_vertical"
+            android:textColor="@color/selected_dot"
+            android:textSize="16dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switch3"
+            android:layout_width="45dp"
+            android:layout_gravity="center"
+            app:track="@drawable/custom_track"
+            android:thumb="@drawable/toggle_selector_green"
+            android:layout_height="20dp"/>
+    </LinearLayout>
+</LinearLayout>
+
+<LinearLayout
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/txt_miscDesc"
+        android:layout_marginLeft="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fontFamily="@font/ubuntu_light"
+        android:text="Zero Deductible (US$ 25/Day)"
+        android:textSize="@dimen/textsize_ten"/>
+</LinearLayout>
+    </LinearLayout>

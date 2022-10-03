@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/creditcard_layout"
+        android:orientation="vertical"
+        android:layout_margin="15dp"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:background="@drawable/creditcardbg">
+
+        <LinearLayout
+            android:visibility="invisible"
+            android:id="@+id/LLDefaultCard"
+            android:gravity="top"
+            android:layout_marginTop="7dp"
+            android:layout_marginLeft="7dp"
+            android:background="@drawable/rectangle_curve_yellow"
+            android:layout_width="120dp"
+            android:layout_height="30dp">
+            <TextView
+                android:id="@+id/txt_DefaultCard"
+                android:layout_width="match_parent"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:layout_height="match_parent"
+                android:text="Default"
+                android:textColor="@color/screen_bg_color"/>
+        </LinearLayout>
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_marginTop="65dp"
+            android:layout_marginBottom="25dp"
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/lbl_CardNum"
+                android:layout_toLeftOf="@+id/lbl_CardUpdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/TitleTextColor"
+                android:textSize="26dp"
+                android:fontFamily="@font/ubuntu_medium"
+                android:text=""/>
+            <TextView
+                android:id="@+id/lbl_CardUpdate"
+                android:gravity="center_vertical"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="7dp"
+                android:textColor="@color/TitleTextColor"
+                android:textAllCaps="true"
+                android:fontFamily="@font/ubuntu_medium"
+                android:text="Edit"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/lbl_CardName"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/selected_dot"
+                android:textSize="23dp"
+                android:fontFamily="@font/ubuntu_medium"
+                android:text=""/>
+            <TextView
+                android:id="@+id/lbl_CardExDate"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_weight="3"
+                android:layout_marginRight="10dp"
+                android:gravity="right"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntu_medium"
+                android:textSize="23dp"
+                android:textColor="@color/TitleTextColor"
+                android:text=""/>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>
+
+

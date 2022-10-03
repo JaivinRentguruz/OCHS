@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_login"
+    app:startDestination="@id/FleetOwnerProfile">
+
+    <fragment
+        android:id="@+id/FleetOwnerProfile"
+        android:name="com.ochs.app.fleetowner.ownerprofile.Fragment_Fleet_Owner_Profile"
+        android:label="FleetOwnerProfile"
+        tools:layout="@layout/fragment_fleet_owner_profile">
+        <action
+            android:id="@+id/action_FleetOwnerProfile_to_MemberShipPlan1"
+            app:destination="@id/MemberShipPlan1" />
+        <action
+            android:id="@+id/action_FleetOwnerProfile_to_VehicleOnRent"
+            app:destination="@id/VehicleOnRent" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/MemberShipPlan1"
+        android:name="com.ochs.app.fleetowner.ownerprofile.Fragment_Membership_Plan_1"
+        android:label="MemberShipPlan1"
+        tools:layout="@layout/fragment_membership_plan_1">
+        <action
+            android:id="@+id/action_MemberShipPlan1_to_MemberShipPlan2"
+            app:destination="@id/MemberShipPlan2" />
+        <action
+            android:id="@+id/action_MemberShipPlan1_to_FleetOwnerProfile"
+            app:destination="@id/FleetOwnerProfile" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/MemberShipPlan2"
+        android:name="com.ochs.app.fleetowner.ownerprofile.Fragment_Membership_Plan_2"
+        android:label="MemberShipPlan1"
+        tools:layout="@layout/fragment_membership_plan_2">
+        <action
+            android:id="@+id/action_FleetOwnerProfile_to_MemberShipPlan1"
+            app:destination="@id/MemberShipPlan1" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/VehicleOnRent"
+        android:name="com.ochs.app.fleetowner.ownerprofile.Fragment_VehicleonRent_List"
+        android:label="VehicleOnRent"
+        tools:layout="@layout/fragment_list_of_my_vehicle">
+        <action
+            android:id="@+id/action_VehicleOnRent_to_ListYourCar_1"
+            app:destination="@id/ListYourCar_1" />
+        <action
+            android:id="@+id/action_VehicleOnRent_to_FleetOwnerProfile"
+            app:destination="@id/FleetOwnerProfile" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ListYourCar_1"
+        android:name="com.ochs.app.fleetowner.ownerprofile.Fragment_List_Your_Car_Step_1"
+        android:label="ListYourCar_1"
+        tools:layout="@layout/fragment_list_your_car_step_1">
+        <action
+            android:id="@+id/action_ListYourCar_1_to_ListYourCar_2"
+            app:destination="@id/ListYourCar_2" />
+        <action
+            android:id="@+id/action_ListYourCar_1_to_VehicleOnRent"
+            app:destination="@id/VehicleOnRent" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ListYourCar_2"
+        android:name="com.ochs.app.fleetowner.ownerprofile.Fragment_List_Your_Car_Step_2"
+        android:label="ListYourCar_2"
+        tools:layout="@layout/fragment_list_your_car_step_2">
+        <action
+            android:id="@+id/action_ListYourCar_2_to_ListYourCar_3"
+            app:destination="@id/ListYourCar_3" />
+        <action
+            android:id="@+id/action_ListYourCar_2_to_ListYourCar_1"
+            app:destination="@id/ListYourCar_1" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ListYourCar_3"
+        android:name="com.ochs.app.fleetowner.ownerprofile.Fragment_List_Your_Car_Step_3"
+        android:label="ListYourCar_3"
+        tools:layout="@layout/fragment_list_your_car_step_3">
+        <action
+            android:id="@+id/action_ListYourCar_3_to_ListYourCar_4"
+            app:destination="@id/ListYourCar_4" />
+        <action
+            android:id="@+id/action_ListYourCar_3_to_ListYourCar_2"
+            app:destination="@id/ListYourCar_2" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ListYourCar_4"
+        android:name="com.ochs.app.fleetowner.ownerprofile.Fragment_List_Your_Car_Step_4"
+        android:label="ListYourCar_4"
+        tools:layout="@layout/fragment_list_your_car_step_4">
+        <action
+            android:id="@+id/action_ListYourCar_4_to_ListYourCar_5"
+            app:destination="@id/ListYourCar_5" />
+        <action
+            android:id="@+id/action_ListYourCar_4_to_MapScreenSearch"
+            app:destination="@id/MapScreenSearch" />
+        <action
+            android:id="@+id/action_ListYourCar_4_to_ListYourCar_3"
+            app:destination="@id/ListYourCar_3" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/MapScreenSearch"
+        android:name="com.ochs.app.fleetowner.ownerprofile.Fragment_Map_Screen_Search_for_Owner"
+        android:label="MapScreenSearch"
+        tools:layout="@layout/fragment_map_screen_search">
+        <action
+            android:id="@+id/action_MapScreenSearch_to_ListYourCar_4"
+            app:destination="@id/ListYourCar_4" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ListYourCar_5"
+        android:name="com.ochs.app.fleetowner.ownerprofile.Fragment_List_Your_Car_Step_5"
+        android:label="ListYourCar_5"
+        tools:layout="@layout/fragment_list_your_car_step_5">
+        <action
+            android:id="@+id/action_ListYourCar_5_to_ListYourCar_5_1"
+            app:destination="@id/ListYourCar_5_1" />
+        <action
+            android:id="@+id/action_ListYourCar_5_to_ListYourCar_6"
+            app:destination="@id/ListYourCar_6" />
+        <action
+            android:id="@+id/action_ListYourCar_5_to_ListYourCar_4"
+            app:destination="@id/ListYourCar_4" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ListYourCar_5_1"
+        android:name="com.ochs.app.fleetowner.ownerprofile.Fragment_List_Your_Car_Step_5_1"
+        android:label="ListYourCar_5"
+        tools:layout="@layout/fragment_list_your_car_step_5_1">
+        <action
+            android:id="@+id/action_ListYourCar_5_1_to_ListYourCar_5"
+            app:destination="@id/ListYourCar_5" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ListYourCar_6"
+        android:name="com.ochs.app.fleetowner.ownerprofile.Fragment_List_Your_Car_Step_6"
+        android:label="ListYourCar_6"
+        tools:layout="@layout/fragment_list_your_car_step_6">
+
+        <action
+            android:id="@+id/action_ListYourCar_6_to_ListYourCar_5"
+            app:destination="@id/ListYourCar_5" />
+
+        <action
+            android:id="@+id/action_ListYourCar_6_to_VehicleOnRent"
+            app:destination="@id/VehicleOnRent" />
+    </fragment>
+</navigation>

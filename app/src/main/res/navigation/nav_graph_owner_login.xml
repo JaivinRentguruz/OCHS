@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_login"
+    app:startDestination="@id/LoginFragment">
+
+    <fragment
+        android:id="@+id/LoginFragment"
+        android:name="com.ochs.app.fleetowner.ownerlogin.Fragment_Owner_login"
+        android:label="Login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_LoginFragment_to_Forget_Password"
+            app:destination="@id/Forget_Password" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/Forget_Password"
+        android:name="com.ochs.app.fleetowner.ownerlogin.Fragment_Forget_Password"
+        android:label="Forget_Password"
+        tools:layout="@layout/fragment_forgot_password">
+        <action
+            android:id="@+id/action_LoginFragment_to_REset_Password"
+            app:destination="@id/REset_Password" />
+        <action
+            android:id="@+id/action_Forget_Password_to_LoginFragment"
+            app:destination="@id/LoginFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/REset_Password"
+        android:name="com.ochs.app.fleetowner.ownerlogin.Fragment_Owner_Reset_Password"
+        android:label="REset_Password"
+        tools:layout="@layout/fragment_reset_password">
+        <action
+            android:id="@+id/action_REset_Password_to_Forget_Password"
+            app:destination="@id/Forget_Password" />
+        <action
+            android:id="@+id/action_REset_Password_to_LoginFragment"
+            app:destination="@id/LoginFragment" />
+    </fragment>
+
+
+</navigation>

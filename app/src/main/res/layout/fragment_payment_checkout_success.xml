@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/selected_dot"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editCreditCard"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:text="Payment Success"
+                    android:textAllCaps="true"
+                    android:textColor="@color/TitleTextColor"
+                    android:textSize="17dp" />
+
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_below="@id/editCreditCard"
+            android:background="@drawable/curve_box"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="28dp"
+                    android:gravity="center"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:textColor="@color/selected_dot"
+                    android:text="Success"/>
+                <ImageView
+                    android:src="@drawable/green_success_img"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </ImageView>
+            </LinearLayout>
+
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:text="Thank You."
+                            android:textSize="20dp"
+                            android:fontFamily="@font/ubuntu_medium"
+                            android:gravity="center"
+                            android:textColor="@color/selected_dot"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                        </TextView>
+                        <TextView
+                            android:id="@+id/txtMessage"
+                            android:layout_marginTop="10dp"
+                            android:textSize="20dp"
+                            android:gravity="center"
+                            android:textColor="@color/selected_dot"
+                            android:fontFamily="@font/ubuntu_light"
+                            android:text=""
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                        </TextView>
+                    </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginBottom="70dp"
+                android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/rectangle_darkcurve_blue"
+                android:layout_width="match_parent"
+                android:gravity="center_vertical"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_gravity="left"
+                    android:padding="2dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:textColor="@color/TitleTextColor"
+                    android:textSize="@dimen/heading1_font_size"
+                    android:text="Amount\nPaid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                </TextView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:padding="4dp"
+                    android:gravity="center_vertical"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/txtTotal"
+                        android:gravity="right"
+                        android:textSize="36dp"
+                        android:padding="5dp"
+                        android:textColor="@color/TitleTextColor"
+                        android:fontFamily="@font/ubuntu_medium"
+                        android:text="Amount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/lblPaymentSuceess"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/footerButtonBC"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtprocess"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Continue"
+                android:theme="@style/footertextview"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

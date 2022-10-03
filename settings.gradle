@@ -1,0 +1,6 @@
+include ':acuantcamera'
+include ':acuantcommon'
+include ':acuantimagepreparation'
+include ':acuantdocumentprocessing'
+rootProject.name='FlexiiCar'
+include ':app'

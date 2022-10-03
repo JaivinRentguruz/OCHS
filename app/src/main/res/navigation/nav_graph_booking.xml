@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_search_activiity"
+    app:startDestination="@id/Search_activity">
+    <fragment
+        android:id="@+id/Search_activity"
+        android:name="com.ochs.app.flexiicar_app.booking.Map_Screen_Fragment"
+        android:label="Search_activity"
+        tools:layout="@layout/fragment_map_screen">
+        <action
+            android:id="@+id/action_Search_activity_to_Available_location"
+            app:destination="@id/Available_location" />
+        <action
+            android:id="@+id/action_Search_activity_to_Selected_location"
+            app:destination="@id/Selected_location" />
+    </fragment>
+    <fragment
+        android:id="@+id/Available_location"
+        android:name="com.ochs.app.flexiicar_app.booking.Fragment_Available_location"
+        android:label="Available_location"
+        tools:layout="@layout/fragment_available_location">
+        <action
+            android:id="@+id/action_Available_location_to_Selected_location"
+            app:destination="@id/Selected_location" />
+        <action
+            android:id="@+id/action_Available_location_to_Search_activity"
+            app:destination="@id/Search_activity" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/Selected_location"
+        android:name="com.ochs.app.flexiicar_app.booking.Fragment_Selected_Location"
+        android:label="Selected_location"
+        tools:layout="@layout/fragment_selected_location">
+        <action
+            android:id="@+id/action_Selected_location_to_Vehicles_Available"
+            app:destination="@id/Vehicles_Available" />
+        <action
+            android:id="@+id/action_Selected_location_to_Available_location"
+            app:destination="@id/Available_location" />
+        <action
+            android:id="@+id/action_Selected_location_to_Search_activity"
+            app:destination="@id/Search_activity" />
+        <action
+            android:id="@+id/action_Selected_location_to_LoginFragment"
+            app:destination="@id/LoginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/LoginFragment"
+        android:name="com.ochs.app.flexiicar_app.booking.Fragment_login_For_booking"
+        android:label="Login"
+        tools:layout="@layout/fragment_login">
+    <action
+        android:id="@+id/action_LoginFragment_to_Selected_location"
+        app:destination="@id/Selected_location" />
+        <action
+            android:id="@+id/action_LoginFragment_to_Finalize_your_rental"
+            app:destination="@id/Finalize_your_rental" />
+    </fragment>
+    <fragment
+        android:id="@+id/Vehicles_Available"
+        android:name="com.ochs.app.flexiicar_app.booking.Fragment_Vehicles_Available"
+        android:label="Vehicles_Available"
+        tools:layout="@layout/fragment_vehicles_available">
+        <action
+            android:id="@+id/action_Vehicles_Available_to_Vehicles_FilterList"
+            app:destination="@id/Vehicles_FilterList" />
+        <action
+            android:id="@+id/action_Vehicles_Available_to_Select_location1"
+            app:destination="@id/Select_location1" />
+        <action
+            android:id="@+id/action_Vehicles_Available_to_Selected_location"
+            app:destination="@id/Selected_location" />
+        <action
+            android:id="@+id/action_Vehicles_Available_to_Search_activity"
+            app:destination="@id/Search_activity" />
+
+        <action
+            android:id="@+id/action_Vehicles_Available_to_Select_addtional_options"
+            app:destination="@id/Select_addtional_options" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/Vehicles_FilterList"
+        android:name="com.ochs.app.flexiicar_app.booking.Fragment_Vehicles_FilterList"
+        android:label="Vehicles_Option_Available"
+        tools:layout="@layout/fragment_vehicle_filterlist">
+        <action
+            android:id="@+id/action_Vehicles_FilterList_to_Vehicles_Available"
+            app:destination="@id/Vehicles_Available" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/Select_location1"
+        android:name="com.ochs.app.flexiicar_app.booking.Fragment_Select_Location1"
+        android:label="Select_location1"
+        tools:layout="@layout/fragment_select_location1">
+        <action
+            android:id="@+id/action_Select_location1_to_Total_tax_fee_details"
+            app:destination="@id/Total_tax_fee_details" />
+        <action
+            android:id="@+id/action_Select_location1_to_Select_addtional_options"
+            app:destination="@id/Select_addtional_options" />
+        <action
+            android:id="@+id/action_Select_location1_to_Vehicles_Available"
+            app:destination="@id/Vehicles_Available" />
+        <action
+            android:id="@+id/action_Select_location1_to_Search_activity"
+            app:destination="@id/Search_activity" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/Total_tax_fee_details"
+        android:name="com.ochs.app.flexiicar_app.commonfragment.Fragment_Details_of_tax_fees"
+        android:label="Total_tax_fee_details"
+        tools:layout="@layout/fragment_details_of_tax_fee_applicable">
+
+        <action
+            android:id="@+id/action_Total_tax_fee_details_to_Select_location1"
+            app:destination="@id/Select_location1" />
+
+        <action
+            android:id="@+id/action_Total_tax_fee_details_to_Finalize_your_rental"
+            app:destination="@id/Finalize_your_rental" />
+
+        <action
+            android:id="@+id/action_Total_tax_fee_details_to_SummaryOfCharges"
+            app:destination="@id/Summary_Of_Charges" />
+
+        <action
+            android:id="@+id/action_Total_tax_fee_details_to_Search_activity"
+            app:destination="@id/Search_activity" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/Select_addtional_options"
+        android:name="com.ochs.app.flexiicar_app.booking.Fragment_Select_addition_Options"
+        android:label="Select_addtional_options"
+        tools:layout="@layout/fragment_select_additional_option">
+        <action
+            android:id="@+id/action_Select_addtional_options_to_Finalize_your_rental"
+            app:destination="@id/Finalize_your_rental" />
+        <action
+            android:id="@+id/action_Select_addtional_options_to_Select_location1"
+            app:destination="@id/Select_location1" />
+        <action
+            android:id="@+id/action_Select_addtional_options_to_FilterByVehicleClass"
+            app:destination="@id/FilterByVehicleClass" />
+        <action
+            android:id="@+id/action_Select_addtional_options_to_Search_activity"
+            app:destination="@id/Search_activity" />
+        <action
+            android:id="@+id/action_Select_addtional_options_to_Vehicles_Available"
+            app:destination="@id/Vehicles_Available" />
+        <action
+            android:id="@+id/action_Select_addtional_options_to_insurance_policy_list"
+            app:destination="@+id/InsurancePolicyList" />
+
+    </fragment>
+
+    //InsurancePolicy
+    <fragment
+        android:id="@+id/InsurancePolicyList"
+        android:name="com.ochs.app.flexiicar_app.user.Fragment_Insurance_Policy_list"
+        android:label="InsurancePolicyList"
+        tools:layout="@layout/fragment_customer_insurance_list">
+        <action
+            android:id="@+id/action_InsurancePolicyList_to_InsurancePolicyUpdate"
+            app:destination="@id/InsurancePolicyUpdate" />
+        <action
+            android:id="@+id/action_InsurancePolicyList_to_Select_addtional_options"
+            app:destination="@id/Select_addtional_options" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/InsurancePolicyUpdate"
+        android:name="com.ochs.app.flexiicar_app.user.Fragment_Insurance_Policy_Update"
+        android:label="InsurancePolicyUpdate"
+        tools:layout="@layout/fragment_customer_insurance_update">
+        <action
+            android:id="@+id/action_InsurancePolicyUpdate_to_InsurancePolicyList"
+            app:destination="@id/InsurancePolicyList" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/FilterByVehicleClass"
+        android:name="com.ochs.app.flexiicar_app.booking.Fragment_Filter_By_Vehicle_Class"
+        android:label="FilterByVehicleClass"
+        tools:layout="@layout/fragment_filterby_vehicle_class">
+        <action
+            android:id="@+id/action_FilterByVehicleClass_to_Select_addtional_options"
+            app:destination="@id/Select_addtional_options" />
+        <action
+            android:id="@+id/action_FilterByVehicleClass_to_MapScreenSearchAddress"
+            app:destination="@id/MapScreenSearchAddress" />
+        <action
+            android:id="@+id/action_FilterByVehicleClass_to_Search_activity"
+            app:destination="@id/Search_activity" />
+    </fragment>
+    <fragment
+        android:id="@+id/MapScreenSearchAddress"
+        android:name="com.ochs.app.flexiicar_app.commonfragment.Fragment_Map_Screen_Search"
+        android:label="MapScreenSearchAddress"
+        tools:layout="@layout/fragment_map_screen_search">
+        <action
+            android:id="@+id/action_MapScreenSearchAddress_to_FilterByVehicleClass"
+            app:destination="@id/FilterByVehicleClass" />
+    </fragment>
+    <fragment
+        android:id="@+id/Finalize_your_rental"
+        android:name="com.ochs.app.flexiicar_app.booking.Fragment_Finalize_Your_Rental"
+        android:label="Finalize_your_rental"
+        tools:layout="@layout/fragment_finalize_your_rental">
+        <action
+            android:id="@+id/action_Finalize_your_rental_to_Term_and_Condtion"
+            app:destination="@id/Term_and_Condtion" />
+        <action
+            android:id="@+id/action_Finalize_your_rental_to_Total_tax_fee_details"
+            app:destination="@id/Total_tax_fee_details" />
+        <action
+            android:id="@+id/action_Finalize_your_rental_to_Select_addtional_options"
+            app:destination="@id/Select_addtional_options" />
+        <action
+            android:id="@+id/action_Finalize_your_rental_to_Payment_checkout"
+            app:destination="@id/Payment_checkout" />
+        <action
+            android:id="@+id/action_Finalize_your_rental_to_flight_details"
+            app:destination="@id/flight_details" />
+        <action
+            android:id="@+id/action_Finalize_your_rental_to_Search_activity"
+            app:destination="@id/Search_activity" />
+        <action
+            android:id="@+id/action_Finalize_your_rental_to_Additional_Driver_List"
+            app:destination="@id/Additional_Driver_List" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/Additional_Driver_List"
+        android:name="com.ochs.app.flexiicar_app.booking.Fragment_Additional_Driver_list"
+        android:label="Additional_Driver_List"
+        tools:layout="@layout/fragment_additional_driver_list">
+        <action
+            android:id="@+id/action_Additional_Driver_List_to_Finalize_your_rental"
+            app:destination="@id/Finalize_your_rental" />
+        <action
+            android:id="@+id/action_Additional_Driver_List_to_Additional_Driver_Add"
+            app:destination="@id/Additional_Driver_Add" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/Additional_Driver_Add"
+        android:name="com.ochs.app.flexiicar_app.booking.Fragment_Additional_Driver_Add"
+        android:label="Additional_Driver_Add"
+        tools:layout="@layout/fragment_driving_license_add_update">
+        <action
+            android:id="@+id/action_Additional_Driver_Add_to_Additional_Driver_List"
+            app:destination="@id/Additional_Driver_List" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/Guest_driver_details"
+        android:name="com.ochs.app.flexiicar_app.booking.Fragment_Guest_Driver_Details"
+        android:label="Guest_driver_details"
+        tools:layout="@layout/fragment_guest_driver_details">
+        <action
+            android:id="@+id/action_Guest_driver_details_to_Finalize_your_rental"
+            app:destination="@id/Finalize_your_rental" />
+        <action
+            android:id="@+id/action_Guest_driver_details_to_LoginFragment"
+            app:destination="@id/LoginFragment" />
+        <action
+            android:id="@+id/action_Guest_driver_details_to_AddCreditCardDetails"
+            app:destination="@id/AddCreditCardDetails" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/Summary_Of_Charges"
+        android:name="com.ochs.app.flexiicar_app.booking.Fragment_Summary_Of_Charges"
+        android:label="Summary_Of_Charges"
+        tools:layout="@layout/fragment_summary_of_charges">
+        <action
+            android:id="@+id/action_Summary_Of_Charges_to_Term_and_Condtion"
+            app:destination="@id/Term_and_Condtion" />
+        <action
+            android:id="@+id/action_Summary_Of_Charges_to_Payment_Success"
+            app:destination="@id/Payment_Success" />
+        <action
+            android:id="@+id/action_Summary_Of_Charges_to_Search_activity"
+            app:destination="@id/Search_activity" />
+        <action
+            android:id="@+id/action_Summary_Of_Charges_to_Total_tax_fee_details"
+            app:destination="@id/Total_tax_fee_details" />
+        <action
+            android:id="@+id/action_Summary_Of_Charges_to_Select_addtional_options"
+            app:destination="@id/Select_addtional_options" />
+    </fragment>
+    <fragment
+        android:id="@+id/flight_details"
+        android:name="com.ochs.app.flexiicar_app.commonfragment.Fragment_Flight_Details"
+        android:label="flight_details"
+        tools:layout="@layout/fragment_flight_details">
+        <action
+            android:id="@+id/action_flight_details_to_Finalize_your_rental"
+            app:destination="@id/Finalize_your_rental" />
+        <action
+            android:id="@+id/action_flight_details_to_Search_activity"
+            app:destination="@id/Search_activity" />
+    </fragment>
+    <fragment
+        android:id="@+id/Term_and_Condtion"
+        android:name="com.ochs.app.flexiicar_app.commonfragment.Fragment_Term_And_Condition"
+        android:label="Term_and_Condtion"
+        tools:layout="@layout/fragment_terms_and_conditions">
+        <action
+            android:id="@+id/action_Term_and_Condtion_to_Finalize_your_rental"
+            app:destination="@id/Finalize_your_rental" />
+        <action
+            android:id="@+id/action_Term_and_Condtion_to_Summary_Of_Charges"
+            app:destination="@id/Summary_Of_Charges" />
+    </fragment>
+    <fragment
+        android:id="@+id/Payment_checkout"
+        android:name="com.ochs.app.flexiicar_app.booking.Fragment_Payment_checkout"
+        android:label="Payment_checkout"
+        tools:layout="@layout/fragment_payment_checkout_process">
+
+        <action
+            android:id="@+id/action_Payment_checkout_to_CardsOnAccount"
+            app:destination="@id/CardsOnAccount" />
+        <action
+            android:id="@+id/action_Payment_checkout_to_Finalize_your_rental"
+            app:destination="@id/Finalize_your_rental" />
+        <action
+            android:id="@+id/action_Payment_checkout_to_Payment_Success"
+            app:destination="@id/Payment_Success" />
+        <action
+            android:id="@+id/action_Payment_checkout_to_AddCreditCardDetails"
+            app:destination="@id/AddCreditCardDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/Payment_Success"
+        android:name="com.ochs.app.flexiicar_app.commonfragment.Fragment_Payment_checkout_Success"
+        android:label="Payment_Success"
+        tools:layout="@layout/fragment_payment_checkout_success">
+
+        <action
+            android:id="@+id/action_Payment_Success_to_Summary_Of_Charges"
+            app:destination="@id/Summary_Of_Charges" />
+    </fragment>
+    <fragment
+        android:id="@+id/CardsOnAccount"
+        android:name="com.ochs.app.flexiicar_app.booking.Fragment_CreditCards_List"
+        android:label="CardsOnAccount"
+        tools:layout="@layout/fragment_creditcards_list">
+        <action
+            android:id="@+id/action_CardsOnAccount_to_EditCreditCard"
+            app:destination="@id/EditCreditCard" />
+        <action
+            android:id="@+id/action_CardsOnAccount_to_AddCreditCardDetails"
+            app:destination="@id/AddCreditCardDetails" />
+        <action
+            android:id="@+id/action_CardsOnAccount_to_Payment_checkout"
+            app:destination="@id/Payment_checkout" />
+    </fragment>
+    <fragment
+        android:id="@+id/EditCreditCard"
+        android:name="com.ochs.app.flexiicar_app.booking.Fragment_Update_credit_card"
+        android:label="EditCreditCard"
+        tools:layout="@layout/fragment_update_creditcard">
+        <action
+            android:id="@+id/action_EditCreditCard_to_CardsOnAccount"
+            app:destination="@id/CardsOnAccount" />
+    </fragment>
+    <fragment
+        android:id="@+id/AddCreditCardDetails"
+        android:name="com.ochs.app.flexiicar_app.booking.Fragment_Add_credit_card"
+        android:label="AddCreditCardDetails"
+        tools:layout="@layout/fragment_add_creditcard">
+        <action
+            android:id="@+id/action_AddCreditCardDetails_to_CardsOnAccount"
+            app:destination="@id/CardsOnAccount" />
+    </fragment>
+    <fragment
+        android:id="@+id/Add_Wallet_Pass"
+        android:name="com.ochs.app.flexiicar_app.commonfragment.Fragment_Add_Wallet_Pass"
+        android:label="Add_Wallet_Pass"
+        tools:layout="@layout/fragment_add_wallet_pass">
+
+        <action
+            android:id="@+id/action_Add_Wallet_Pass_to_Company_Policies"
+            app:destination="@id/Company_Policies" />
+    </fragment>
+    <fragment
+        android:id="@+id/Company_Policies"
+        android:name="com.ochs.app.flexiicar_app.commonfragment.Fragment_Company_Polices"
+        android:label="Company_Policies"
+        tools:layout="@layout/fragment_company_policies">
+        <action
+            android:id="@+id/action_Company_Policies_to_Add_Wallet_Pass"
+            app:destination="@id/Add_Wallet_Pass" />
+    </fragment>
+</navigation>

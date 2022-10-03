@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_currentbooking">
+
+    <fragment
+        android:id="@+id/LocationAndKey"
+        android:name="com.ochs.app.flexiicar_app.currentbookinglist.Fragment_Location_And_Key"
+        android:label="LocationAndKey"
+        tools:layout="@layout/fragment_location_and_key">
+       <!-- <action
+            android:id="@+id/action_LocationAndKey_to_Vehicles_Available"
+            app:destination="@id/Vehicles_Available" />-->
+    </fragment>
+
+    <fragment android:id="@+id/BookingList"
+        android:name="com.ochs.app.flexiicar_app.currentbookinglist.Fragment_CurrentBooking"
+        android:label="BookingList"
+        tools:layout="@layout/fragment_reservation"
+        >
+         <action
+              android:id="@+id/action_BookingList_to_LocationAndKey"
+              app:destination="@id/LocationAndKey" />
+    </fragment>
+
+
+</navigation>

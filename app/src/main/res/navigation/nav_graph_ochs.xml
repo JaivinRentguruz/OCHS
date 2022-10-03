@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/Vehicles_Available">
+
+    <fragment
+        android:id="@+id/Vehicles_Available"
+        android:name="com.ochs.app.flexiicar_app.ochs.Fragment_VehicleAvailable"
+        android:label="Vehicles_Available"
+        tools:layout="@layout/fragment_vehicles_available">
+        <action
+            android:id="@+id/action_Vehicles_Available_to_Vehicles_FilterList"
+            app:destination="@id/Vehicles_FilterList" />
+        <action
+            android:id="@+id/action_Vehicles_Available_to_LocationAndKey"
+            app:destination="@id/LocationAndKey" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/Vehicles_FilterList"
+        android:name="com.ochs.app.flexiicar_app.ochs.Fragment_Vehicle_Filter"
+        android:label="Vehicles_Option_Available"
+        tools:layout="@layout/fragment_vehicle_filterlist">
+        <action
+            android:id="@+id/action_Vehicles_FilterList_to_Vehicles_Available"
+            app:destination="@id/Vehicles_Available" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/LocationAndKey"
+        android:name="com.ochs.app.flexiicar_app.ochs.Fragment_Vehicle_LocationAndKey"
+        android:label="LocationAndKey"
+        tools:layout="@layout/fragment_location_and_key">
+        <action
+            android:id="@+id/action_LocationAndKey_to_Vehicles_Available"
+            app:destination="@id/Vehicles_Available" />
+    </fragment>
+
+</navigation>

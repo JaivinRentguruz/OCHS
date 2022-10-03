@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_login"
+    app:startDestination="@id/LoginFragment">
+
+    <fragment
+        android:id="@+id/LoginFragment"
+        android:name="com.ochs.app.flexiicar_app.login.Fragment_login"
+        android:label="Login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_LoginFragment_to_Forgot_Password"
+            app:destination="@id/Forgot_Password" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/Forgot_Password"
+        android:name="com.ochs.app.flexiicar_app.login.Fragment_Forgot_Password"
+        android:label="Forgot_Password"
+        tools:layout="@layout/fragment_forgot_password">
+        <action
+            android:id="@+id/action_Forgot_Password_to_Reset_Password"
+            app:destination="@id/Reset_Password" />
+        <action
+            android:id="@+id/action_Forgot_Password_to_LoginFragment"
+            app:destination="@id/LoginFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/Reset_Password"
+        android:name="com.ochs.app.flexiicar_app.login.Fragment_Reset_Password"
+        android:label="Reset_Password"
+        tools:layout="@layout/fragment_reset_password">
+        <action
+            android:id="@+id/action_Reset_Password_to_Forgot_Password"
+            app:destination="@id/Forgot_Password" />
+        <action
+            android:id="@+id/action_Reset_Password_to_LoginFragment"
+            app:destination="@id/LoginFragment" />
+    </fragment>
+
+
+</navigation>

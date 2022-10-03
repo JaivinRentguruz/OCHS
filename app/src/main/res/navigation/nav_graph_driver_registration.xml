@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_driver_profile"
+    app:startDestination="@id/CreateProfile"
+    tools:ignore="UnusedNavigation">
+
+    <fragment
+        android:id="@+id/CreateProfile"
+        android:name="com.ochs.app.flexiicar_app.login.Fragment_Create_Profile"
+        android:label="Create Profile"
+        tools:layout="@layout/fragment_create_profile">
+        <action
+            android:id="@+id/action_CreateProfile_to_DriverProfile"
+            app:destination="@id/DriverProfile" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/DriverProfile"
+        android:name="com.ochs.app.flexiicar_app.login.Fragment_Driver_Profile_1"
+        android:label="Profile"
+        tools:layout="@layout/fragment_driver_profile_1">
+        <action
+            android:id="@+id/action_DriverProfile_to_DriverProfile2"
+            app:destination="@id/DriverProfile2" />
+        <action
+            android:id="@+id/action_DriverProfile_to_CreateProfile"
+            app:destination="@id/CreateProfile" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/DriverProfile2"
+        android:name="com.ochs.app.flexiicar_app.login.Fragment_Driver_Profile_2"
+        android:label="LicenseDetails"
+        tools:layout="@layout/fragment_driver_profile_2">
+        <action
+            android:id="@+id/action_DriverProfile2_to_DriverProfile"
+            app:destination="@id/DriverProfile" />
+        <action
+            android:id="@+id/action_DriverProfile2_to_DriverProfile3"
+            app:destination="@id/DriverProfile3" />
+        <action
+            android:id="@+id/action_DriverProfile2_to_CreateProfile"
+            app:destination="@id/CreateProfile" />
+    </fragment>
+    <fragment
+        android:id="@+id/DriverProfile3"
+        android:name="com.ochs.app.flexiicar_app.login.Fragment_Driver_Profile_3"
+        android:label="Profile"
+        tools:layout="@layout/fragment_driver_profile_3">
+        <action
+            android:id="@+id/action_DriverProfile3_to_DriverProfile2"
+            app:destination="@id/DriverProfile2" />
+        <action
+            android:id="@+id/action_DriverProfile3_to_DriverProfile4"
+            app:destination="@id/DriverProfile4" />
+        <action
+            android:id="@+id/action_DriverProfile3_to_CreateProfile"
+            app:destination="@id/CreateProfile" />
+    </fragment>
+    <fragment
+        android:id="@+id/DriverProfile4"
+        android:name="com.ochs.app.flexiicar_app.login.Fragment_Driver_Profile_4"
+        android:label="Creditcard Details"
+        tools:layout="@layout/fragment_driver_profile_4">
+        <action
+            android:id="@+id/action_DriverProfile4_to_DriverProfile3"
+            app:destination="@id/DriverProfile3" />
+        <action
+            android:id="@+id/action_DriverProfile4_to_Complete_Register"
+            app:destination="@id/Complete_Register" />
+        <action
+            android:id="@+id/action_DriverProfile4_to_CreateProfile"
+            app:destination="@id/CreateProfile" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/Complete_Register"
+        android:name="com.ochs.app.flexiicar_app.login.Fragment_Register_Completed"
+        android:label="Creditcard Details"
+        tools:layout="@layout/fragment_registration_completed">
+    </fragment>
+</navigation>

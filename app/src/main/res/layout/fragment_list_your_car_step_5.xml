@@ -1,0 +1,710 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/selected_dot"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/selectedVehicle"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="40dp"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="12dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/back_to_step4"
+                                android:layout_width="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="15dp"
+                                android:paddingRight="12dp"
+                                android:src="@drawable/ic_chevron_left" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/ubuntu_medium"
+                                android:text="FILTER BY VEHICLE CLASS"
+                                android:textColor="@color/TitleTextColor"
+                                android:textSize="17dp" />
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/mainLayout"
+                        android:background="@drawable/curve_box"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginTop="7dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:fontFamily="@font/ubuntu_medium"
+                                android:text="SELECT VEHICLE CLASS"
+                                android:textColor="@color/selected_dot"
+                                android:textSize="17dp" />
+                        </LinearLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/textColorHint"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginRight="25dp"
+                    android:layout_marginTop="35dp"
+                    android:layout_width="65dp"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/curve_box_green"
+                    android:layout_height="65dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="36dp"
+                        android:gravity="center"
+                        android:fontFamily="@font/ubuntu_medium"
+                        android:textColor="@color/TitleTextColor"
+                        android:text="5">
+                    </TextView>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_below="@id/selectedVehicle"
+            android:background="@color/screen_bg_color"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="48dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginBottom="15dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/lbl_Equipment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/curve_box_gray_box_bg"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:weightSum="100"
+                        android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="78"
+                        android:padding="5dp"
+                        android:layout_gravity="left"
+                        android:textSize="16dp"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/selected_dot"
+                        android:fontFamily="@font/ubuntu_medium"
+                        android:text="GPS Navigation System"/>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="22"
+                        android:gravity="right"
+                        android:layout_marginRight="7dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:background="@drawable/aquamarine_bc"
+                            android:layout_width="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_height="17dp">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Available"
+                                android:textSize="8sp"
+                                android:textAllCaps="true"
+                                android:gravity="right"
+                                android:layout_marginRight="10dp"
+                                android:textAlignment="gravity"
+                                android:fontFamily="@font/ubuntu_medium"
+                                android:textColor="@color/TitleTextColor">
+                            </TextView>
+                        </LinearLayout>
+                    </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="100"
+                        android:layout_height="wrap_content">
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="20"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp">
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/desktop_img"/>
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="70"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:textSize="@dimen/textsize_ten"
+                            android:inputType="textMultiLine"
+                            android:fontFamily="@font/ubuntu_light"
+                            android:text="This is a details of Equipment Extra Add on Options. This is a details of Equipment Extra Add on Options. This is a details of Equipment Extra Add on Options. This is a details of Equipment Extra Add on Options. "/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:weightSum="100"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="65"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center_vertical"
+                            android:layout_marginLeft="10dp"
+                            android:orientation="vertical"
+                            android:layout_height="match_parent">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Per Day"
+                                android:fontFamily="@font/ubuntu_light"
+                                android:textSize="@dimen/textsize_ten"
+                                android:textColor="@color/footerButtonBC"/>
+                            <TextView
+                                android:layout_marginTop="5dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="US$7.85 + 6% Tax (Max US$50)"
+                                android:textSize="@dimen/textsize_ten"
+                                android:fontFamily="@font/ubuntu_light"
+                                android:textColor="@color/selected_dot"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="35"
+                            android:orientation="vertical"
+                            android:gravity="center_vertical"
+                            android:background="@drawable/ic_rectangle_blackbox"
+                            android:layout_height="match_parent">
+                            <TextView
+                                android:layout_marginRight="8dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Total Amount"
+                                android:textColor="#ECFF0A"
+                                android:fontFamily="@font/ubuntu_light"
+                                android:gravity="right"
+                                android:textSize="10dp" />
+                            <TextView
+                                android:layout_marginRight="8dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="US$30.00"
+                                android:textColor="@color/TitleTextColor"
+                                android:gravity="right"
+                                android:fontFamily="@font/ubuntu_medium"
+                                android:textSize="14dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/curve_box_gray_box_bg"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:weightSum="100"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="78"
+                            android:padding="5dp"
+                            android:layout_gravity="left"
+                            android:textSize="16dp"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="@color/selected_dot"
+                            android:fontFamily="@font/ubuntu_medium"
+                            android:text="Beach Chair"/>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="22"
+                            android:gravity="right"
+                            android:layout_marginRight="7dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content">
+                            <LinearLayout
+                                android:background="@drawable/aquamarine_bc"
+                                android:layout_width="match_parent"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:layout_height="17dp">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Available"
+                                    android:textSize="8sp"
+                                    android:textAllCaps="true"
+                                    android:gravity="right"
+                                    android:layout_marginRight="10dp"
+                                    android:textAlignment="gravity"
+                                    android:fontFamily="@font/ubuntu_medium"
+                                    android:textColor="@color/TitleTextColor">
+                                </TextView>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="100"
+                        android:layout_height="wrap_content">
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="20"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp">
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/chair_1"/>
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="70"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:textSize="@dimen/textsize_ten"
+                            android:inputType="textMultiLine"
+                            android:fontFamily="@font/ubuntu_light"
+                            android:text="This is a details of Equipment Extra Add on Options. This is a details of Equipment Extra Add on Options. This is a details of Equipment Extra Add on Options. This is a details of Equipment Extra Add on Options. "/>                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:weightSum="100"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="65"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center_vertical"
+                            android:layout_marginLeft="10dp"
+                            android:orientation="vertical"
+                            android:layout_height="match_parent">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Per Day"
+                                android:fontFamily="@font/ubuntu_light"
+                                android:textSize="@dimen/textsize_ten"
+                                android:textColor="@color/footerButtonBC"/>
+                            <TextView
+                                android:layout_marginTop="5dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="US$7.85 + 6% Tax (Max US$50)"
+                                android:textSize="@dimen/textsize_ten"
+                                android:fontFamily="@font/ubuntu_light"
+                                android:textColor="@color/selected_dot"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="35"
+                            android:orientation="vertical"
+                            android:gravity="center_vertical"
+                            android:background="@drawable/ic_rectangle_blackbox"
+                            android:layout_height="match_parent">
+                            <TextView
+                                android:layout_marginRight="8dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Total Amount"
+                                android:textColor="#ECFF0A"
+                                android:fontFamily="@font/ubuntu_light"
+                                android:gravity="right"
+                                android:textSize="10dp" />
+                            <TextView
+                                android:layout_marginRight="8dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="US$30.00"
+                                android:textColor="@color/TitleTextColor"
+                                android:gravity="right"
+                                android:fontFamily="@font/ubuntu_medium"
+                                android:textSize="14dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/curve_box_gray_box_bg"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:weightSum="100"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="78"
+                            android:padding="5dp"
+                            android:layout_gravity="left"
+                            android:textSize="16dp"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="@color/selected_dot"
+                            android:fontFamily="@font/ubuntu_medium"
+                            android:text="Kids Booster Seat"/>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="22"
+                            android:gravity="right"
+                            android:layout_marginRight="7dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content">
+                            <LinearLayout
+                                android:background="@drawable/aquamarine_bc"
+                                android:layout_width="match_parent"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:layout_height="17dp">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Available"
+                                    android:textSize="8sp"
+                                    android:textAllCaps="true"
+                                    android:gravity="right"
+                                    android:layout_marginRight="10dp"
+                                    android:textAlignment="gravity"
+                                    android:fontFamily="@font/ubuntu_medium"
+                                    android:textColor="@color/TitleTextColor">
+                                </TextView>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="100"
+                        android:layout_height="wrap_content">
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="20"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp">
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/chair_2"/>
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="70"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:textSize="@dimen/textsize_ten"
+                            android:inputType="textMultiLine"
+                            android:fontFamily="@font/ubuntu_light"
+                            android:text="This is a details of Equipment Extra Add on Options. This is a details of Equipment Extra Add on Options. This is a details of Equipment Extra Add on Options. This is a details of Equipment Extra Add on Options. "/>                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:weightSum="100"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="65"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center_vertical"
+                            android:layout_marginLeft="10dp"
+                            android:orientation="vertical"
+                            android:layout_height="match_parent">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Per Day"
+                                android:fontFamily="@font/ubuntu_light"
+                                android:textSize="@dimen/textsize_ten"
+                                android:textColor="@color/footerButtonBC"/>
+                            <TextView
+                                android:layout_marginTop="5dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="US$7.85 + 6% Tax (Max US$50)"
+                                android:textSize="@dimen/textsize_ten"
+                                android:fontFamily="@font/ubuntu_light"
+                                android:textColor="@color/selected_dot"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="35"
+                            android:orientation="vertical"
+                            android:gravity="center_vertical"
+                            android:background="@drawable/ic_rectangle_blackbox"
+                            android:layout_height="match_parent">
+                            <TextView
+                                android:layout_marginRight="8dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Total Amount"
+                                android:textColor="#ECFF0A"
+                                android:fontFamily="@font/ubuntu_light"
+                                android:gravity="right"
+                                android:textSize="10dp" />
+                            <TextView
+                                android:layout_marginRight="8dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="US$30.00"
+                                android:textColor="@color/TitleTextColor"
+                                android:gravity="right"
+                                android:fontFamily="@font/ubuntu_medium"
+                                android:textSize="14dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/curve_box_gray_box_bg"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:weightSum="100"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="78"
+                            android:padding="5dp"
+                            android:layout_gravity="left"
+                            android:textSize="16dp"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="@color/selected_dot"
+                            android:fontFamily="@font/ubuntu_medium"
+                            android:text="Cooler Box"/>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="22"
+                            android:gravity="right"
+                            android:layout_marginRight="7dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content">
+                            <LinearLayout
+                                android:background="@drawable/aquamarine_bc"
+                                android:layout_width="match_parent"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:layout_height="17dp">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Available"
+                                    android:textSize="8sp"
+                                    android:textAllCaps="true"
+                                    android:gravity="right"
+                                    android:layout_marginRight="10dp"
+                                    android:textAlignment="gravity"
+                                    android:fontFamily="@font/ubuntu_medium"
+                                    android:textColor="@color/TitleTextColor">
+                                </TextView>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="100"
+                        android:layout_height="wrap_content">
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="20"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp">
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/blue_box"/>
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="70"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:textSize="@dimen/textsize_ten"
+                            android:inputType="textMultiLine"
+                            android:fontFamily="@font/ubuntu_light"
+                            android:text="This is a details of Equipment Extra Add on Options. This is a details of Equipment Extra Add on Options. This is a details of Equipment Extra Add on Options. This is a details of Equipment Extra Add on Options. "/>                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:weightSum="100"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="65"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center_vertical"
+                            android:layout_marginLeft="10dp"
+                            android:orientation="vertical"
+                            android:layout_height="match_parent">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Per Day"
+                                android:fontFamily="@font/ubuntu_light"
+                                android:textSize="@dimen/textsize_ten"
+                                android:textColor="@color/footerButtonBC"/>
+                            <TextView
+                                android:layout_marginTop="5dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="US$7.85 + 6% Tax (Max US$50)"
+                                android:textSize="@dimen/textsize_ten"
+                                android:fontFamily="@font/ubuntu_light"
+                                android:textColor="@color/selected_dot"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="35"
+                            android:orientation="vertical"
+                            android:gravity="center_vertical"
+                            android:background="@drawable/ic_rectangle_blackbox"
+                            android:layout_height="match_parent">
+                            <TextView
+                                 android:layout_marginRight="8dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Total Amount"
+                                android:textColor="#ECFF0A"
+                                android:fontFamily="@font/ubuntu_light"
+                                android:gravity="right"
+                                android:textSize="10dp" />
+                            <TextView
+                                android:layout_marginRight="8dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="US$30.00"
+                                android:textColor="@color/TitleTextColor"
+                                android:gravity="right"
+                                android:fontFamily="@font/ubuntu_medium"
+                                android:textSize="14dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <LinearLayout
+            android:id="@+id/lbl_Next5"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/footerButtonBC"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_gravity="center"
+                android:paddingTop="10dp"
+                android:paddingBottom="14dp"
+                android:textSize="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Next"
+                android:fontFamily="@font/ubuntu_medium"
+                android:textAllCaps="true"
+                android:textColor="@color/TitleTextColor"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

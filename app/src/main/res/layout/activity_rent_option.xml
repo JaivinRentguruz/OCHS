@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/selected_dot">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/llWelcomeNote"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="0dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="70dp"
+                android:fontFamily="@font/ubuntu_medium"
+                android:text="Welcome Back"
+                android:textColor="@color/screen_bg_color"
+                android:textSize="28dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/ubuntu_light"
+                android:gravity="bottom"
+                android:text="Please select one of the option"
+                android:textColor="@color/screen_bg_color"
+                android:textSize="16dp" />
+
+        </LinearLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/llWelcomeNote"
+            android:background="@drawable/curve_box">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:background="@drawable/ic_black_bg"
+                        android:layout_width="95dp"
+                        android:layout_height="95dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="0dp"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/ic_flexxicar_app_logo_50" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true"
+            android:paddingBottom="15dp"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/lblRentCar"
+                android:layout_width="match_parent"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/curve_box_red111"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="I like to rent a car"
+                    android:textAllCaps="true"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:paddingTop="36dp"
+                    android:paddingBottom="36dp"
+                    android:textColor="@color/screen_bg_color"
+                    android:gravity="center"
+                    android:textSize="20dp">
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lblRentMyCar"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/curve_box_blue111"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="I like to rent my car"
+                    android:textAllCaps="true"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:paddingTop="36dp"
+                    android:paddingBottom="36dp"
+                    android:textColor="@color/screen_bg_color"
+                    android:gravity="center"
+                    android:textSize="20dp">
+                </TextView>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
